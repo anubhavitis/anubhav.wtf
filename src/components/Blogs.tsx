@@ -31,7 +31,7 @@ const blogs: Blog[] = [
 
 export default function Blogs() {
   return (
-    <div className="flex flex-col gap-4 w-fit mx-auto">
+    <div className="flex flex-col gap-4 w-fit">
       {blogs.map((blog) => (
         <Blog key={blog.title} {...blog} />
       ))}
@@ -44,9 +44,8 @@ function Blog({ title, description, date, link }: Blog) {
     <div className="p-2 group rounded transition-colors w-full">
       <a href={link} target="_blank" rel="noopener noreferrer">
         <div className="flex flex-col">
-          <div className="text-xl font-bold transition-colors group-hover:text-green-600">
-            {" "}
-            {title}{" "}
+          <div className="text-xl font-bold transition-colors group-hover:underline group-hover:decoration-green-600 group-hover:decoration-2 group-hover:underline-offset-4">
+            {title}
           </div>
           {/* <div className="text-sm "> {description} </div> */}
           <div className="text-sm dark:text-gray-300 text-gray-500 ">

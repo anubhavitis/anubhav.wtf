@@ -10,7 +10,7 @@ export default function Home() {
     <div>
       <Inspect>
         <div className="min-h-screen bg-white dark:bg-neutral-900 transition-colors duration-300 p-2">
-          <div className="max-w-4xl mx-auto px-4">
+          <div className="max-w-3xl mx-auto px-4">
             <Navbar />
             <Landing />
             <Blogs />
