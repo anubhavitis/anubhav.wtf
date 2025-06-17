@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <div>
       <Inspect>
-        <div className="min-h-screen bg-white dark:bg-neutral-900 transition-colors duration-300 p-2">
+        <div className="min-h-screen transition-colors duration-300 p-2">
           <div className="max-w-3xl mx-auto px-4">
             <Navbar />
             <Landing />
