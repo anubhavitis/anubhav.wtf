@@ -41,7 +41,7 @@ export default function Blogs() {
 
 function Blog({ title, description, date, link }: Blog) {
   return (
-    <div className="p-2 group rounded transition-colors w-full">
+    <div className="py-2 group rounded transition-colors w-full">
       <a href={link} target="_blank" rel="noopener noreferrer">
         <div className="flex flex-col">
           <div className="text-xl font-bold transition-colors group-hover:underline group-hover:decoration-green-600 group-hover:decoration-2 group-hover:underline-offset-4">

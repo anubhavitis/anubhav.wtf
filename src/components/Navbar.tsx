@@ -4,9 +4,6 @@ import Link from "next/link";
 import ThemeToggle from "./ThemeToggle";
 import { Button } from "./ui/button";
 import { usePathname } from "next/navigation";
-import { TwitterIcon } from "./ui/twitter";
-import { GithubIcon } from "./ui/github";
-import { LinkedinIcon } from "./ui/linkedin";
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -19,8 +16,8 @@ export default function Navbar() {
   ];
 
   return (
-    <div className="flex items-center justify-between gap-4 w-full p-2">
-      <div className="flex items-center gap-4">
+    <div className="relative top-0 flex items-center justify-between gap-4 w-full py-2">
+      <div className="flex items-center gap-2 md:gap-4">
         {links.map((link) => (
           <Button
             key={link.href}
@@ -35,21 +32,7 @@ export default function Navbar() {
           </Button>
         ))}
       </div>
-      <div className="flex items-center gap-4">
-        <a href="https://twitter.com/anubhavitis" target="_blank">
-          <TwitterIcon size={24} className="text-gray-600 dark:text-gray-400" />
-        </a>
-        <a href="https://github.com/anubhavitis" target="_blank">
-          <GithubIcon size={24} className="text-gray-600 dark:text-gray-400" />
-        </a>
-        <a href="https://linkedin.com/in/anubhavitis" target="_blank">
-          <LinkedinIcon
-            size={24}
-            className="text-gray-600 dark:text-gray-400"
-          />
-        </a>
-        <ThemeToggle />
-      </div>
+      <ThemeToggle />
     </div>
   );
 }
