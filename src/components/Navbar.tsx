@@ -18,12 +18,12 @@ export default function Navbar() {
 
   return (
     <div className="relative top-0 flex items-center justify-between gap-4 w-full py-2">
-      <div className="flex items-center gap-2 md:gap-4">
+      <div className="flex items-center gap-2 md:gap-6">
         {links.map((link) => (
           <Button
             key={link.href}
             variant="link"
-            className={`hover:decoration-green-600 hover:decoration-2 pl-0 ${
+            className={`hover:decoration-green-600 hover:decoration-2 px-0 ${
               pathname === link.href.split("/")[1]
                 ? "underline decoration-green-600 decoration-2"
                 : ""
