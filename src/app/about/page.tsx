@@ -49,7 +49,6 @@ const contents = [
       "I don't like drinking tea or coffee. I am water person. My parents raised me like that. So blame them if you don't like this. I, however, love it.",
       "I am a solo traveller. I prefer visiting small and quite places, staying at hostels to meet fellow solo travelers.",
       "I love cooking north Indian food and I make sure I get to cook at-least once a week.",
-      "I like exploring different music. Vivid genre, languages, styles, blends, etc. Spotify does an amazing job in recommending me new music.",
       "I am not a fan of buying things. Ownership is a responsibility. So, I often rent stuff and sell my possessions as soon its utility is exhausted for me.",
     ],
   },
