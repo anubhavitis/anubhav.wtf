@@ -6,13 +6,14 @@ import { Button } from "./ui/button";
 import { usePathname } from "next/navigation";
 
 export default function Navbar() {
-  const pathname = usePathname();
+  const pathname = usePathname().split("/")[1];
+  console.log(pathname);
 
   const links = [
     { href: "/", label: "anubhav.wtf" },
     { href: "/about", label: "About Me" },
     { href: "/projects", label: "Projects" },
-    { href: "/blogs", label: "Blogs", hidden: true },
+    { href: "/blogs", label: "Blogs" },
   ];
 
   return (
@@ -23,10 +24,10 @@ export default function Navbar() {
             key={link.href}
             variant="link"
             className={`hover:decoration-green-600 hover:decoration-2 pl-0 ${
-              pathname === link.href
+              pathname === link.href.split("/")[1]
                 ? "underline decoration-green-600 decoration-2"
                 : ""
-            } ${link.hidden ? "hidden" : ""}`}
+            }`}
           >
             <Link href={link.href}>{link.label}</Link>
           </Button>

@@ -1,59 +1,97 @@
+import Link from "next/link";
+
 type Blog = {
   title: string;
   description: string;
-  date: string;
+  date: Date;
   link: string;
 };
 
 const blogs: Blog[] = [
   {
-    title: "Understanding React Hooks",
+    title: "Getting started with Asynchronous programming",
     description:
-      "A deep dive into React Hooks and their practical applications",
-    date: "Jan-12, 2025",
-    link: "https://example.com/react-hooks",
+      "A quick introduction to Asynchronous programming and its practical applications",
+    date: new Date("June 10, 2021"),
+    link: "/blogs/getting-started-with-async-programming",
   },
   {
-    title: "The Future of Web Development",
+    title: "Microservices Architecture: What, Where & Why?",
     description:
-      "Exploring emerging trends and technologies in web development",
-    date: "Jan-12, 2025",
-    link: "https://example.com/future-web",
+      "A deep dive into Microservices Architecture, its benefits, and how it can be implemented in a project",
+    date: new Date("August 22, 2022"),
+    link: "/blogs/microservices-architecture-what-where-why",
   },
   {
-    title: "Design Systems at Scale",
+    title: "Push vs Pull API Architecture",
     description:
-      "Building and maintaining design systems for large organizations",
-    date: "Jan-12, 2025",
-    link: "https://example.com/design-systems",
+      "A comparison of Push and Pull API Architecture and their use cases",
+    date: new Date("August 2, 2022"),
+    link: "/blogs/push-vs-pull-api-architecture",
+  },
+  {
+    title: "What exactly is API?",
+    description: "A deep dive into what API is and how it works, with examples",
+    date: new Date("January 13, 2021"),
+    link: "/blogs/what-exactly-is-api",
+  },
+  {
+    title: "Why Decentralised Web is a necessity?",
+    description:
+      "A deep dive into why Decentralised Web is a necessity and how it can be achieved",
+    date: new Date("June 29, 2021"),
+    link: "/blogs/why-decentralised-web-is-a-necessity",
   },
 ];
 
 export default function Blogs() {
   return (
     <div className="flex flex-col gap-4 w-fit">
-      {blogs.map((blog) => (
-        <Blog key={blog.title} {...blog} />
-      ))}
+      {blogs
+        .sort((a, b) => b.date.getTime() - a.date.getTime())
+        .map((blog) => (
+          <Blog key={blog.title} {...blog} />
+        ))}
     </div>
   );
 }
 
-function Blog({ title, description, date, link }: Blog) {
+function Blog({
+  date,
+  title,
+  description,
+  link,
+}: {
+  date: Date;
+  title: string;
+  description?: string;
+  link: string;
+}) {
   return (
     <div className="py-2 group rounded transition-colors w-full">
-      <a href={link} target="_blank" rel="noopener noreferrer">
-        <div className="flex flex-col">
-          <div className="text-xl font-bold transition-colors group-hover:underline group-hover:decoration-green-600 group-hover:decoration-2 group-hover:underline-offset-4">
-            {title}
+      <Link href={link} rel="noopener noreferrer">
+        <div className="flex group flex-col justify-between md:flex-row my-6 gap-x-5 gap-y-2">
+          <div className="w-full md:w-1/5 md:text-right md:mr-2 flex flex-col md:flex-row justify-start items-start md:justify-center md:items-center">
+            <h1 className="text-gray-600 dark:text-gray-400 text-md">
+              {date.toLocaleDateString("en-US", {
+                month: "long",
+                day: "numeric",
+                year: "numeric",
+              })}
+            </h1>
           </div>
-          {/* <div className="text-sm "> {description} </div> */}
-          <div className="text-sm dark:text-gray-300 text-gray-500 ">
-            {" "}
-            {date}{" "}
+          <div className="w-full md:w-4/5 md:ml-2">
+            <div className="text-xl font-semibold transition-colors group-hover:underline group-hover:decoration-green-600 group-hover:decoration-2 group-hover:underline-offset-4">
+              {title}
+            </div>
+            {description && (
+              <div className="text-sm text-gray-500 dark:text-gray-400">
+                {description}
+              </div>
+            )}
           </div>
         </div>
-      </a>
+      </Link>
     </div>
   );
 }

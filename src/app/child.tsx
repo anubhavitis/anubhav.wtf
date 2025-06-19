@@ -19,7 +19,7 @@ function Child({
         enableSystem
         disableTransitionOnChange
       >
-        <div className="flex flex-col justify-between min-h-screen max-w-3xl mx-auto p-2">
+        <div className="flex flex-col justify-between min-h-screen max-w-3xl mx-auto py-2 px-8 md:px-2">
           <Navbar />
           <div className="flex-1">{children}</div>
           <Footer />

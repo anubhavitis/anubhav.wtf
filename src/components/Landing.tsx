@@ -1,7 +1,5 @@
 import React from "react";
-import { GithubIcon } from "./ui/github";
-import { TwitterIcon } from "./ui/twitter";
-import { LinkedinIcon } from "./ui/linkedin";
+import Social from "./Social";
 
 export default function Landing() {
   return (
@@ -21,20 +19,7 @@ export default function Landing() {
         You'll often find me reading random books, going on long walks,
         exploring maths and physics, or cooking comfort food.
       </div>
-      <div className="flex items-center gap-4 mt-12">
-        <a href="https://twitter.com/anubhavitis" target="_blank">
-          <TwitterIcon size={24} className="text-gray-600 dark:text-gray-400" />
-        </a>
-        <a href="https://github.com/anubhavitis" target="_blank">
-          <GithubIcon size={24} className="text-gray-600 dark:text-gray-400" />
-        </a>
-        <a href="https://linkedin.com/in/anubhavitis" target="_blank">
-          <LinkedinIcon
-            size={24}
-            className="text-gray-600 dark:text-gray-400"
-          />
-        </a>
-      </div>
+      <Social />
     </div>
   );
 }
