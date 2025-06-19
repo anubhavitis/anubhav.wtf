@@ -2,9 +2,12 @@
 import "./globals.css";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
-import Inspect from "inspx";
+import dynamic from "next/dynamic";
+// import Inspect from "inspx";
 import { ThemeProvider } from "next-themes";
 import { Geist, Geist_Mono } from "next/font/google";
+
+const Inspect = dynamic(() => import("inspx"), { ssr: false });
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
