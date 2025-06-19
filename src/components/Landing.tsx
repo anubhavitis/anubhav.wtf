@@ -16,10 +16,12 @@ export default function Landing() {
         . Welcome to my corner of the internet.
       </div>
       <div className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
-        You'll often find me reading random books, going on long walks,
+        You'll often find me reading random books, going for long walks,
         exploring maths and physics, or cooking comfort food.
       </div>
-      <Social />
+      <div className="mt-8">
+        <Social />
+      </div>
     </div>
   );
 }

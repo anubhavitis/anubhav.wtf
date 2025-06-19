@@ -82,11 +82,22 @@ export default function About() {
       </div>
       <div>
         {contents.map((content) => (
-          <Content key={content.head} head={content.head} body={content.body} />
+          <div className="my-6">
+            <Content
+              key={content.head}
+              head={content.head}
+              body={content.body}
+            />
+          </div>
         ))}
       </div>
-      <div className="flex justify-center mt-12">
-        <Social />
+      <div className="flex flex-col justify-center items-center mt-12 gap-2">
+        <h1 className="text-lg font-semibold text-gray-900 dark:text-gray-100">
+          Wanna Say Hi?
+        </h1>
+        <div className="mt-4">
+          <Social />
+        </div>
       </div>
     </div>
   );

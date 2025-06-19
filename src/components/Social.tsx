@@ -6,7 +6,7 @@ import { LinkedinIcon } from "./ui/linkedin";
 
 function Social() {
   return (
-    <div className="flex items-center gap-4 mt-12">
+    <div className="flex items-center gap-4">
       <a href="https://twitter.com/anubhavitis" target="_blank">
         <TwitterIcon
           size={24}
