@@ -161,31 +161,41 @@ function Page({ params }: PageProps) {
             <hr className="my-8 border-gray-300 dark:border-gray-600" />
           ),
 
-          // @ts-ignore
-          code({ className, children, ...props }) {
+          code({ inline, className, children, ...props }) {
             const match = /language-(\w+)/.exec(className || "");
-            const codeString = String(children);
+            const content = String(children);
+            const hasLanguage = match && match[1];
+            const hasNewlines = content.includes("\n");
 
-            // If inline (single backticks), render as inline code
-            if (codeString.startsWith("```")) {
+            console.log("Code component:", {
+              inline,
+              className,
+              content: content.substring(0, 50),
+              hasLanguage,
+              hasNewlines,
+            });
+
+            // If inline (single backticks) or no language specification, render as inline code
+            if (inline || (!hasLanguage && !hasNewlines)) {
               return (
-                <CopyBlock
-                  text={String(children).replace(/\n$/, "")}
-                  language={match ? match[1] : ""}
-                  showLineNumbers={true}
-                  theme={codeTheme}
-                  codeBlock
-                />
+                <code
+                  className="bg-gray-100 dark:bg-gray-800 px-2 py-1 rounded text-sm"
+                  {...props}
+                >
+                  {children}
+                </code>
               );
             }
 
+            // If not inline (triple backticks), render as code block
             return (
-              <code
-                className="bg-gray-100 dark:bg-gray-800 px-2 py-1 rounded text-sm"
-                {...props}
-              >
-                {children}
-              </code>
+              <CopyBlock
+                text={content.replace(/\n$/, "")}
+                language={hasLanguage ? match[1] : ""}
+                showLineNumbers={true}
+                theme={codeTheme}
+                codeBlock
+              />
             );
           },
         }}
