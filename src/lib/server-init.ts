@@ -82,11 +82,6 @@ function initializeCronJob(): void {
     timezone: 'Asia/Kolkata' // IST timezone
   });
     
-    cron.schedule('*/1 * * * *', async () => {
-      console.log('🕕 Running every 1 min cron job...');
-      await dailyCronTask();
-    });
-    
     console.log('📅 Cron jobs initialized successfully');
     isInitialized = true;
 }
