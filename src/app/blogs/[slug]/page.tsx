@@ -161,19 +161,12 @@ function Page({ params }: PageProps) {
             <hr className="my-8 border-gray-300 dark:border-gray-600" />
           ),
 
+          // @ts-ignore
           code({ inline, className, children, ...props }) {
             const match = /language-(\w+)/.exec(className || "");
             const content = String(children);
             const hasLanguage = match && match[1];
             const hasNewlines = content.includes("\n");
-
-            console.log("Code component:", {
-              inline,
-              className,
-              content: content.substring(0, 50),
-              hasLanguage,
-              hasNewlines,
-            });
 
             // If inline (single backticks) or no language specification, render as inline code
             if (inline || (!hasLanguage && !hasNewlines)) {
