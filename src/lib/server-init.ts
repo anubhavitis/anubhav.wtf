@@ -64,6 +64,11 @@ function initializeCronJob(): void {
   if (isInitialized) {
     return;
   }
+    
+    if(TL_BOT_TOKEN === undefined || TL_CHAT_ID === undefined){
+        console.error('TL_BOT_TOKEN or TL_CHAT_ID is not set');
+        return;
+    }
   
   // Schedule cron job to run daily at 6:00 AM IST (UTC+5:30)
   // Cron expression: 0 0 6 * * * (seconds minutes hours day month day-of-week)
