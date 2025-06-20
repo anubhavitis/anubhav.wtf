@@ -1,17 +1,14 @@
 import React from "react";
-import { Blog, BlogComponent } from "./Blogs";
+import { BlogComponent } from "./Blogs";
+import { BlogPost } from "@/lib/blogs";
 
-const blogs: Blog[] = [
-  {
-    title: "Microservices Architecture: What, Where & Why?",
-    description:
-      "A deep dive into Microservices Architecture, its benefits, and how it can be implemented in a project",
-    date: new Date("August 22, 2022"),
-    link: "/blogs/microservices-architecture-what-where-why",
-  },
-];
+interface RecentProps {
+  blogs: BlogPost[];
+}
 
-const Recent = () => {
+const Recent = ({ blogs }: RecentProps) => {
+  const recentBlogs = blogs.slice(0, 2); // Show only the 3 most recent blogs
+
   return (
     <div>
       <div>
@@ -20,11 +17,15 @@ const Recent = () => {
         </h1>
       </div>
       <div className="flex flex-col gap-2 w-fit">
-        {blogs
-          .sort((a, b) => b.date.getTime() - a.date.getTime())
-          .map((blog) => (
-            <BlogComponent key={blog.title} {...blog} />
-          ))}
+        {recentBlogs.map((blog) => (
+          <BlogComponent
+            key={blog.slug}
+            title={blog.title}
+            description={blog.description}
+            date={blog.date}
+            link={blog.link}
+          />
+        ))}
       </div>
     </div>
   );

@@ -7,7 +7,6 @@ import { usePathname } from "next/navigation";
 
 export default function Navbar() {
   const pathname = usePathname().split("/")[1];
-  console.log(pathname);
 
   const links = [
     { href: "/", label: "anubhav.wtf" },
