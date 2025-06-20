@@ -75,7 +75,7 @@ export default function About() {
           height={200}
           className="rounded-lg mb-16 
           grayscale hover:grayscale-0 transition-all duration-300
-          shadow-lg shadow-gray-300 dark:shadow-gray-700
+          shadow-gray-300 dark:shadow-gray-700
           hover:shadow-xl
         "
         />

@@ -3,11 +3,9 @@ import React from "react";
 export default function Content({
   head,
   body,
-  bulletPoints = true,
 }: {
   head: string;
   body: string[];
-  bulletPoints?: boolean;
 }) {
   return (
     <div className="flex flex-col justify-between md:flex-row gap-x-5 gap-y-2">
@@ -18,11 +16,7 @@ export default function Content({
         {typeof body === "string" ? (
           <li>{body}</li>
         ) : (
-          <ul
-            className={`${
-              bulletPoints ? "list-disc" : "list-none"
-            } space-y-1 text-sm pl-4`}
-          >
+          <ul className="list-disc space-y-1 text-sm pl-4">
             {body.map((item) => (
               <li key={item} className="pl-2">
                 {item}

@@ -16,7 +16,7 @@ function Social() {
       <a href="mailto:anubhavitis@gmail.com" target="_blank">
         <MailIcon
           size={24}
-          className="text-gray-600 dark:text-gray-400 mx-1 hover:scale-120 transition-all duration-300"
+          className="text-gray-600 dark:text-gray-400 mx-1 hover:scale-120 dark:hover:text-gray-100 transition-all duration-300"
         />
       </a>
       <a href="https://github.com/anubhavitis" target="_blank">
