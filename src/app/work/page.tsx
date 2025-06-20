@@ -1,6 +1,6 @@
-import ProjectsComponent, { Project } from "@/components/Projects";
+import ShowcaseComponent, { Showcase } from "@/components/Showcase";
 
-const projects: Project[] = [
+const projects: Showcase[] = [
   {
     title: "Peeksy",
     descriptions: [
@@ -23,6 +23,9 @@ const projects: Project[] = [
     link: "https://github.com/anubhavitis/peeksy",
     image: "/peeksy.png",
   },
+];
+
+const experience: Showcase[] = [
   {
     title: "Fileverse",
     descriptions: [
@@ -64,23 +67,41 @@ const projects: Project[] = [
   },
 ];
 
-export default function Projects() {
+export default function Work() {
   return (
-    <div className="flex flex-col justify-between my-16">
-      <div className="flex flex-col gap-4 mb-10">
-        <h1 className="text-4xl font-bold text-gray-900 dark:text-gray-100">
-          <div className="flex flex-col gap-2">
-            <span>Things I have build,</span>
-            <span>while making my mark on the web.</span>
-          </div>
-        </h1>
-        <p>
-          Building is the best way to learn. Here are some of the best projects
-          I have worked on.
-        </p>
+    <div className="flex-1 flex-col justify-between">
+      <div className="flex flex-col justify-between my-16">
+        <div className="flex flex-col gap-4 mb-10">
+          <h1 className="text-4xl font-bold text-gray-900 dark:text-gray-100">
+            <div className="flex flex-col gap-2">
+              <span>Things I have build,</span>
+              <span>while making my mark on the web.</span>
+            </div>
+          </h1>
+          <p>
+            Building is the best way to learn. Here are some of the best
+            projects I have worked on.
+          </p>
+        </div>
+        <div className="w-full max-w-4xl mx-auto mt-10 mb-16 md:mb-32">
+          <ShowcaseComponent projects={projects} />
+        </div>
       </div>
-      <div className="w-full max-w-4xl mx-auto mt-10 mb-16 md:mb-32">
-        <ProjectsComponent projects={projects} />
+      <div className="flex flex-col justify-between my-16">
+        <div className="flex flex-col gap-4 mb-10">
+          <h1 className="text-4xl font-bold text-gray-900 dark:text-gray-100">
+            <div className="flex flex-col gap-2">
+              <span>Organisations</span>
+            </div>
+          </h1>
+          <p>
+            I have been fortunate to work with remarkable firms and amazing
+            people.
+          </p>
+        </div>
+        <div className="w-full max-w-4xl mx-auto mt-10 mb-16 md:mb-32">
+          <ShowcaseComponent projects={experience} />
+        </div>
       </div>
     </div>
   );

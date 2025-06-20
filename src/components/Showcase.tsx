@@ -1,16 +1,16 @@
 import Image from "next/image";
 
-export type Project = {
+export type Showcase = {
   title: string;
   descriptions: (string | React.ReactNode)[];
   link: string;
   image: string;
 };
 
-export default function ProjectsComponent({
+export default function ShowcaseComponent({
   projects,
 }: {
-  projects: Project[];
+  projects: Showcase[];
 }) {
   return (
     <div className="flex flex-col">
