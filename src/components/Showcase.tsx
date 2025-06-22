@@ -17,7 +17,7 @@ export default function ShowcaseComponent({
       {projects.map((project) => (
         <div
           key={project.title}
-          className="flex flex-col md:flex-row gap-4 my-12"
+          className="flex flex-col md:flex-row gap-4 mt-12"
         >
           <div className="group">
             <div className="flex flex-col gap-2">
@@ -28,7 +28,7 @@ export default function ShowcaseComponent({
                 className="text-blue-500 hover:text-blue-600 dark:text-blue-400 dark:hover:text-blue-300"
               >
                 <h2
-                  className="text-3xl font-bold text-gray-600 dark:text-gray-300
+                  className="text-2xl font-bold text-gray-600 dark:text-gray-300
                 group-hover:underline decoration-2 decoration-green-500 group-hover:underline-offset-4
                 "
                 >
