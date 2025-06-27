@@ -10,9 +10,9 @@ export default function Navbar() {
 
   const links = [
     { href: "/", label: "anubhav.wtf" },
-    { href: "/about", label: "About Me" },
-    { href: "/work", label: "Work" },
-    { href: "/blogs", label: "Blogs" },
+    { href: "/about", label: "about me" },
+    { href: "/work", label: "work" },
+    { href: "/blogs", label: "blogs" },
   ];
 
   return (
