@@ -56,7 +56,7 @@ const contents = [
   {
     head: "Fun facts",
     body: [
-      "I am really good at whistling. I can whistle almost any tune.",
+      "I am really good at whistling. I can whistle almost any tune. And, you'll often find me blending it with my guitar.",
       "I always have some wounds/injuries, mostly in my legs. That's because I am careless, not adventurous. ",
       "I grew up in a big joint family with cousins with almost all age-groups. Believe me, even today, I have cousins who are a few months old to some in their 30s.",
       "I am not a pet person, and by that I mean pets avoid me.",
