@@ -16,7 +16,7 @@ export default function Content({
         {typeof body === "string" ? (
           <li>{body}</li>
         ) : (
-          <ul className="list-disc space-y-1 text-sm pl-4">
+          <ul className="text-gray-600 dark:text-gray-400 list-disc space-y-1 text-lg pl-4">
             {body.map((item) => (
               <li key={item} className="pl-2">
                 {item}
