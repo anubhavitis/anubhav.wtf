@@ -17,7 +17,7 @@ Krsna explains the knowlege of absolute, once this is known, nothing else is lef
 - Material Energy constitutes of eight elements: Earth, Fire, Water, Air, Space(Ether), Mind, Intelligence, and Ego. These material energy works with manifestations of spiritual energy.
 - taste of water, or heat of the sun, strength of the strong, sex life, intelligent life, etc. Lord is in all of them.
 - Spiritual energies tend to forget about the supreme energies by getting deluded in the material energy. Though the supreme is above all, and inexhaustible.
-- Only way to know this absolute truth is through complete surrender to the lord. One can never know this truth as long as they are participating with material energies for that works with manifestations of spiritual energies.
+- Only way to know this absolute truth is through complete surrender to the lord. One can never know this truth as long as they are participating with material energies, since inferior energies are manifestations of superior energies.
 - Four kinds of people live pious life
 	- The distressed: people who are unhappy in life
 	- The desirer: people who have material desires (power, wealth, family, sex etc)
