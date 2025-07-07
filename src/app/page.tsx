@@ -10,8 +10,8 @@ export default async function Home() {
     <InspectWrapper>
       <div className="flex-1 flex-col justify-between">
         <Landing />
-        <div className="h-px bg-gray-200 dark:bg-gray-800 w-full my-8" />
-        <Recent blogs={blogs} />
+        {/* <div className="h-px bg-gray-200 dark:bg-gray-800 w-full my-8" /> */}
+        {/* <Recent blogs={blogs} /> */}
       </div>
     </InspectWrapper>
   );
