@@ -2,6 +2,7 @@
 date: "2021-06-10"
 title: "Getting started with Asynchronous programming"
 description: "A quick introduction to Asynchronous programming and its practical applications"
+tags: "tech,programming,tutorial"
 ---
 
 Generally, when we code an application, a chunk of code runs at a time. So if our code contains a certain number of tasks, then each of them is compiled one at a time. This form of programming is called **Synchronous programming**.
@@ -35,13 +36,13 @@ Most of the programming languages such as Python, JavaScript are old and are sin
 
 New programming languages such as GO, Rust, etc. use multi-threading by default.
 
-------
+---
 
 ## Asynchronous web applications
 
->"Over 50% of mobile users abandons websites that take longer than three seconds to load." - Research by Google
+> "Over 50% of mobile users abandons websites that take longer than three seconds to load." - Research by Google
 
-Let's discuss an application of asynchronous programming in a web apps through a general example. Consider you have a mailing application and you're task is to send 5 emails. 
+Let's discuss an application of asynchronous programming in a web apps through a general example. Consider you have a mailing application and you're task is to send 5 emails.
 
 Assuming one mail takes 2sec to process, then this task is going to cost 10sec in total. This is not good for users, most of the users are not going to wait for 10sec for completion of tasks.
 
@@ -78,12 +79,15 @@ def index(request):
 
     return HttpResponse("Mails, sent successfully.")
 ```
+
 Which returns output as:
+
 ```
 Process initiated at 2021-06-09 09:01:58.158870
 Process completed at 2021-06-09 09:02:08.179977
 Total time for sending 5 mails: 0:00:10.021107
 ```
+
 > Notice how our function took 10.021107s to execute.
 
 Now part of our code that's consuming most of the time is send_mail(). If you think about it, we can create a separate thread for this process, and let it run. This was, our main thread would execute instantly. This will let the user know that his mails are sending in process, and he can continue with other works.
@@ -93,6 +97,7 @@ Now part of our code that's consuming most of the time is send_mail(). If you th
 Let's edit our index function and to send these mails asynchronously by using [celery](https://docs.celeryproject.org/en/stable/index.html).
 
 So, refactored function is:
+
 ```python
 # proj/urls.py
 urlpatterns = [
@@ -117,7 +122,9 @@ def index(request):
     return HttpResponse("Mails, sent successfully.")
 
 ```
+
 which returns output as:
+
 ```
 Process initiated at 2021-06-09 09:09:19.496051
 Process initiated at 2021-06-09 09:09:19.549268
@@ -126,16 +133,16 @@ Total time for sending 5 mails: 0:00:00.053217
 
 > Notice, this time our function took only 0.053217s to execute.
 
-![giphy (4)](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/mjy9hprul89ytw910j3t.gif) 
- 
+![giphy (4)](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/mjy9hprul89ytw910j3t.gif)
+
 This is how modern web applications are developed to handle time taking tasks on different threads, and process the main thread as fast as possible.
 
------
+---
 
 By now, I am hoping you have good understanding of Asynchronous programming and its applications. If you like the article, share it among your peers.
 
 Did I miss anything? Put down in the comments. As always suggestions are always welcome.
 
-Find me on: [Twitter](https://twitter.com/anubhavitis) | [GitHub](https://github.com/anubhavitis) | [LinkedIn](https://linkedin.com/in/anubhavitis) 
+Find me on: [Twitter](https://twitter.com/anubhavitis) | [GitHub](https://github.com/anubhavitis) | [LinkedIn](https://linkedin.com/in/anubhavitis)
 
 > Happy Coding.

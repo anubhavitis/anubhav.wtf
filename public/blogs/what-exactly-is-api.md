@@ -2,6 +2,7 @@
 date: "2021-01-13"
 title: "What exactly is API?"
 description: "A deep dive into what API is and how it works, with examples"
+tags: "tech,backend,tutorial"
 ---
 
 APIs are one of the most significant parts of software development, every developer must be well versed with them. I have been working as a golang backend engineer for about a year now, have constructed plenty of APIs for various projects.
@@ -64,7 +65,7 @@ REST API request generally consists of Method, Body(auth and other parameters), 
 
 <img src="https://user-images.githubusercontent.com/26124625/104276950-e9a60d00-54cb-11eb-84d5-efc4b4202e2e.png"></img>
 
-As stated earlier, REST API responses generally in JSON format. Here is a sample response to the above API requests. 
+As stated earlier, REST API responses generally in JSON format. Here is a sample response to the above API requests.
 
 **Note**: To get a similar response from the previous request, you'll have to add an API key: and API secret.
 

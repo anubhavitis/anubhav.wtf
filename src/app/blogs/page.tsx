@@ -1,8 +1,9 @@
 import { BlogComponent } from "@/components/Blogs";
-import { getAllBlogs } from "@/lib/blogs";
+import { getAllBlogs, getTags } from "@/lib/blogs";
 
 export default async function Blogs() {
   const blogs = await getAllBlogs();
+  const allTags = await getTags();
 
   return (
     <div className="flex flex-col my-16">
@@ -15,15 +16,24 @@ export default async function Blogs() {
           well enough. So here is my attempt to explain stuff I learn.
         </p>
       </div>
-      <div className="flex flex-col gap-2 w-fit">
+
+      <div className="flex flex-wrap gap-2 mb-10">
+        {allTags.map((tag) => (
+          <span
+            key={tag}
+            className="
+              text-gray-600 dark:text-gray-400 
+              px-2 inline-block rounded-full text-xs 
+              shadow-sm dark:shadow-gray-600"
+          >
+            {tag}
+          </span>
+        ))}
+      </div>
+
+      <div className="flex flex-col w-full">
         {blogs.map((blog) => (
-          <BlogComponent
-            key={blog.slug}
-            title={blog.title}
-            description={blog.description}
-            date={blog.date}
-            link={blog.link}
-          />
+          <BlogComponent key={blog.slug} {...blog} />
         ))}
       </div>
     </div>

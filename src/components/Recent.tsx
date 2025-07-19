@@ -18,13 +18,7 @@ const Recent = ({ blogs }: RecentProps) => {
       </div>
       <div className="flex flex-col gap-2 w-fit">
         {recentBlogs.map((blog) => (
-          <BlogComponent
-            key={blog.slug}
-            title={blog.title}
-            description={blog.description}
-            date={blog.date}
-            link={blog.link}
-          />
+          <BlogComponent key={blog.slug} {...blog} />
         ))}
       </div>
     </div>

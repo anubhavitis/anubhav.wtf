@@ -2,6 +2,7 @@
 title: "From Decline to Dominance: Uniswap's Stunning DeFi Comeback"
 date: "2025-06-15"
 description: "Uniswap's amazing incentive strategy fueling massive growth for Unichain, resulting in staggering 21,713% user growth within first month of launch"
+tags: "defi,web3"
 ---
 
 ## What’s Happening
@@ -13,13 +14,16 @@ Launched on November 2018, [Uniswap](https://app.uniswap.org/), quickly became t
 To address these challenges, Uniswap launched [Unichain](https://www.unichain.org/), an Ethereum Layer 2 blockchain, on February-2025. To jumpstart adoption, Uniswap introduced a $45 million liquidity incentive program. Here’s how it works:
 
 ### Liquidity Incentives
+
 Users who provide liquidity by depositing tokens into Unichain and Uniswap V4, are rewarded. Making it more profitable to trade and supply assets on the new chain.
-    
+
 ### Comprehensive Growth Plan
+
 This incentive program is part of a broader $165 million initiative by the Uniswap Foundation, including:
+
 - $95.4 million in grants for developers, core contributors, and validators
 - $25.1 million for team expansion and governance tooling
-        
+
 The primary goal is to supercharge growth, attract developers, and establish Unichain as a leading hub for DeFi activity.
 
 ## Outcome

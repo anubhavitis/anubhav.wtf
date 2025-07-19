@@ -6,13 +6,14 @@ import { CopyBlock } from "react-code-blocks";
 import { useTheme } from "next-themes";
 import { Theme, ThemeModes } from "react-code-blocks/dist/types";
 
-interface BlogContentProps {
+export interface BlogContentProps {
   content: string;
   title: string;
   date: Date | null;
+  tags: string[];
 }
 
-function BlogContent({ content, title, date }: BlogContentProps) {
+export function BlogContent({ content, title, date, tags }: BlogContentProps) {
   const { theme } = useTheme();
   const [codeTheme, setCodeTheme] = useState<Theme>({
     mode: theme as ThemeModes,
@@ -20,6 +21,7 @@ function BlogContent({ content, title, date }: BlogContentProps) {
 
   useEffect(() => {
     setCodeTheme({ mode: theme as ThemeModes });
+    console.log(content, tags);
   }, [theme]);
 
   return (
@@ -30,6 +32,19 @@ function BlogContent({ content, title, date }: BlogContentProps) {
             {title}
           </div>
         )}
+        <div className="flex flex-wrap gap-2">
+          {tags.map((tag) => (
+            <span
+              key={tag}
+              className="px-2 inline-block rounded-full text-xs 
+                  text-gray-500 dark:text-gray-400  
+                  shadow-sm dark:shadow-gray-600"
+            >
+              {tag}
+            </span>
+          ))}
+        </div>
+
         {date && (
           <div className="text-md text-gray-600 dark:text-gray-400">
             {date.toLocaleDateString("en-US", {

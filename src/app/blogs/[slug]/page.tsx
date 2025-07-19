@@ -1,34 +1,13 @@
 import React from "react";
 import { notFound } from "next/navigation";
-import matter from "gray-matter";
 import { Metadata } from "next";
-import { readFileSync } from "fs";
-import { join } from "path";
-import BlogContent from "./BlogContent.tsx";
+import { BlogContent } from "./BlogContent";
+import { BlogPost, getBlogBySlug } from "@/lib/blogs";
 
 interface PageProps {
   params: Promise<{
     slug: string;
   }>;
-}
-
-// Helper function to fetch blog data
-async function getBlogData(slug: string) {
-  try {
-    const filePath = join(process.cwd(), "public", "blogs", `${slug}.md`);
-    const markdownContent = readFileSync(filePath, "utf8");
-    const { data, content } = matter(markdownContent);
-
-    return {
-      frontmatter: data,
-      content,
-      title: data.title || `Blog: ${slug}`,
-      description: data.description || `Read about ${slug}`,
-      date: data.date ? new Date(data.date) : null,
-    };
-  } catch (error) {
-    return null;
-  }
 }
 
 // Generate metadata for SEO
@@ -38,7 +17,7 @@ export async function generateMetadata({
   const resolvedParams = await params;
   const { slug } = resolvedParams;
 
-  const blogData = await getBlogData(slug);
+  const blogData = await getBlogBySlug(slug);
 
   if (!blogData) {
     return {
@@ -76,19 +55,13 @@ async function Page({ params }: PageProps) {
   const resolvedParams = await params;
   const { slug } = resolvedParams;
 
-  const blogData = await getBlogData(slug);
+  const blogData = await getBlogBySlug(slug);
 
   if (!blogData) {
     notFound();
   }
 
-  return (
-    <BlogContent
-      content={blogData.content}
-      title={blogData.title}
-      date={blogData.date}
-    />
-  );
+  return <BlogContent {...blogData} />;
 }
 
 export default Page;
