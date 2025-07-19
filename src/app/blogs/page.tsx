@@ -1,9 +1,24 @@
+"use client";
 import { BlogComponent } from "@/components/Blogs";
-import { getAllBlogs, getTags } from "@/lib/blogs";
+import { BlogPost, getAllBlogs, getAllTags } from "@/lib/blogs";
+import { useState } from "react";
+import { useEffect } from "react";
 
-export default async function Blogs() {
-  const blogs = await getAllBlogs();
-  const allTags = await getTags();
+export default function Blogs() {
+  const [blogs, setBlogs] = useState<BlogPost[]>([]);
+  const [allTags, setAllTags] = useState<string[]>([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const [blogsData, tagsData] = await Promise.all([
+        getAllBlogs(),
+        getAllTags(),
+      ]);
+      setBlogs(blogsData);
+      setAllTags(tagsData);
+    };
+    fetchData();
+  }, []);
 
   return (
     <div className="flex flex-col my-16">

@@ -58,6 +58,9 @@ export function BlogContent({ content, title, date, tags }: BlogContentProps) {
       <ReactMarkdown
         remarkPlugins={[remarkGfm]} // Use GitHub Flavored Markdown
         components={{
+          img: ({ src, alt }) => (
+            <img src={src} alt={alt} className="w-full h-auto" />
+          ),
           h1: ({ children }) => (
             <h1 className="text-4xl font-bold text-gray-900 dark:text-gray-100 mb-6 mt-12">
               {children}

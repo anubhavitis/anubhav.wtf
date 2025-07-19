@@ -67,7 +67,7 @@ export async function getAllBlogs(tags: string[] = []): Promise<BlogPost[]> {
   });
 } 
 
-export async function getTags(): Promise<string[]> {
+export async function getAllTags(): Promise<string[]> {
   if (fetchedBlogs.length == 0) {
     fetchedBlogs = await fetchBlogs();
   }
