@@ -50,12 +50,13 @@ export default function Blogs() {
               <button
                 key={tag}
                 className={`
-                  text-gray-600 dark:text-gray-400 
+                  text-gray-600 dark:text-gray-300 
                   px-2 inline-block rounded-full text-xs 
-                  shadow-sm dark:shadow-gray-600 hover:bg-blue-100 dark:hover:bg-blue-600
+                  shadow-sm dark:shadow-gray-600 hover:bg-green-200 dark:hover:bg-green-600
+                  cursor-pointer
                   ${
                     selectedTags.includes(tag)
-                      ? "bg-blue-200 dark:bg-blue-800 font-semibold"
+                      ? "bg-green-300 dark:bg-green-800 text-blackdark:text-white "
                       : ""
                   }
                 `}
