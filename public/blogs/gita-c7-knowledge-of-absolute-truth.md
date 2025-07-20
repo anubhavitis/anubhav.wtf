@@ -1,7 +1,7 @@
 ---
 title: "Bhagavad Gita Chapter 7: Knowledge of the Absolute"
 date: "2025-06-30"
-description: "Understanding the divine energies, absolute truth, and the path of devotion through Chapter 7 of the Bhagavad Gita, where Lord Krishna explains the material and spiritual manifestations of the Supreme"
+description: "Chapter 7 explains the Supreme's material and spiritual energies and the path to true knowledge through devotion."
 tags: "spirituality"
 ---
 

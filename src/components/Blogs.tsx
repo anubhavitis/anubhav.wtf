@@ -1,7 +1,7 @@
 import { BlogPost } from "@/lib/blogs";
 import Link from "next/link";
 
-export function BlogComponent({ date, title, link }: BlogPost) {
+export function BlogComponent({ date, title, description, link }: BlogPost) {
   return (
     <div className="group rounded transition-colors w-full">
       <Link href={link} rel="noopener noreferrer">
@@ -10,7 +10,7 @@ export function BlogComponent({ date, title, link }: BlogPost) {
             className="
             w-full md:w-1/5 flex flex-col md:flex-row
             md:text-right md:mr-2 
-            justify-start items-start md:justify-end md:items-right"
+            justify-start items-start md:justify-center md:items-center"
           >
             <h1 className="text-gray-400 dark:text-gray-600 text-md">
               {date.toLocaleDateString("en-US", {
@@ -23,6 +23,9 @@ export function BlogComponent({ date, title, link }: BlogPost) {
           <div className="w-full md:w-4/5 md:ml-2">
             <div className="text-lg font-semibold transition-colors group-hover:underline group-hover:decoration-green-600 group-hover:decoration-2 group-hover:underline-offset-4">
               {title}
+            </div>
+            <div className="text-gray-400 dark:text-gray-600 text-sm">
+              {description}
             </div>
           </div>
         </div>
