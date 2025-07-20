@@ -12,7 +12,7 @@ export function BlogComponent({ date, title, link }: BlogPost) {
             md:text-right md:mr-2 
             justify-start items-start md:justify-end md:items-right"
           >
-            <h1 className="text-gray-600 dark:text-gray-400 text-md">
+            <h1 className="text-gray-400 dark:text-gray-600 text-md">
               {date.toLocaleDateString("en-US", {
                 month: "long",
                 day: "numeric",

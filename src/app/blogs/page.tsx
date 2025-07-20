@@ -7,18 +7,27 @@ import { useEffect } from "react";
 export default function Blogs() {
   const [blogs, setBlogs] = useState<BlogPost[]>([]);
   const [allTags, setAllTags] = useState<string[]>([]);
+  const [selectedTags, setSelectedTags] = useState<string[]>([]);
 
   useEffect(() => {
     const fetchData = async () => {
       const [blogsData, tagsData] = await Promise.all([
-        getAllBlogs(),
+        getAllBlogs(selectedTags),
         getAllTags(),
       ]);
       setBlogs(blogsData);
       setAllTags(tagsData);
     };
     fetchData();
-  }, []);
+  }, [selectedTags]);
+
+  const handleTagClick = (tag: string) => {
+    setSelectedTags(
+      selectedTags.includes(tag)
+        ? selectedTags.filter((t) => t !== tag)
+        : [...selectedTags, tag]
+    );
+  };
 
   return (
     <div className="flex flex-col my-16">
@@ -33,17 +42,31 @@ export default function Blogs() {
       </div>
 
       <div className="flex flex-wrap gap-2 mb-10">
-        {allTags.map((tag) => (
-          <span
-            key={tag}
-            className="
-              text-gray-600 dark:text-gray-400 
-              px-2 inline-block rounded-full text-xs 
-              shadow-sm dark:shadow-gray-600"
-          >
-            {tag}
-          </span>
-        ))}
+        {allTags.length === 0 ? (
+          <span className="text-gray-400 text-sm">No tags found.</span>
+        ) : (
+          <>
+            {allTags.map((tag) => (
+              <button
+                key={tag}
+                className={`
+                  text-gray-600 dark:text-gray-400 
+                  px-2 inline-block rounded-full text-xs 
+                  shadow-sm dark:shadow-gray-600 hover:bg-blue-100 dark:hover:bg-blue-600
+                  ${
+                    selectedTags.includes(tag)
+                      ? "bg-blue-200 dark:bg-blue-800 font-semibold"
+                      : ""
+                  }
+                `}
+                onClick={() => handleTagClick(tag)}
+                aria-pressed={selectedTags.includes(tag)}
+              >
+                {tag}
+              </button>
+            ))}
+          </>
+        )}
       </div>
 
       <div className="flex flex-col w-full">

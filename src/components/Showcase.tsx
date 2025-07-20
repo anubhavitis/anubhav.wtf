@@ -51,7 +51,7 @@ export default function ShowcaseComponent({
             <Image
               src={project.image}
               alt={project.title}
-              className="object-cover rounded-lg hover:scale-200 transition-all duration-300"
+              className="object-cover rounded-lg hover:scale-150 transition-all duration-600"
               width={400}
               height={300}
             />
