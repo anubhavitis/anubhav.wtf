@@ -5,12 +5,12 @@ export function BlogComponent({ date, title, description, link }: BlogPost) {
   return (
     <div className="group rounded transition-colors w-full">
       <Link href={link} rel="noopener noreferrer">
-        <div className="flex group flex-col justify-between md:flex-row my-2 gap-x-5 gap-y-2">
+        <div className="flex group flex-col justify-between md:flex-row my-4 gap-x-5 gap-y-2">
           <div
             className="
             w-full md:w-1/5 flex flex-col md:flex-row
             md:text-right md:mr-2 
-            justify-start items-start md:justify-center md:items-center"
+            justify-start items-start md:justify-end md:items-center"
           >
             <h1 className="text-gray-400 dark:text-gray-600 text-md">
               {date.toLocaleDateString("en-US", {
