@@ -28,7 +28,7 @@ export function BlogComponent({ date, title, description, link }: BlogPost) {
               {description}
             </div>
           </div>
-        </div>
+        </div>            
       </Link>
     </div>
   );
