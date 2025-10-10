@@ -2,7 +2,7 @@
 title: "Bhagavad Gita Chapter 12: Devotional Service"
 date: "2025-07-20"
 description: "Bhakti Yoga, Janan Yoga and different paths leading to supereme"
-tags: "spirituality,gita"
+tags: "spirituality"
 ---
 
 As discussed before, there are several ways to reach Krsna. Mainly by being personalists (accepting God in a personal form and attributes, bhakti-yoga) or impersonalists (accepting God as infinity, jnana-yoga).

@@ -2,7 +2,7 @@
 title: "Bhagavad Gita Chapter 14: Three modes of Nature"
 date: "2025-07-24"
 description: "Krsna explains how the three modes of material nature bind all living entities and the path to transcend them"
-tags: "spirituality,gita"
+tags: "spirituality"
 ---
 
 This material universe is the source of birth of all living entities, and the Supreme is the seed-giving father of all species of life. This combination of living and non-living things is created by the Supreme.

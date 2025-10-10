@@ -83,7 +83,7 @@ export default function Work() {
     "I have been fortunate to work with remarkable firms and amazing people.";
 
   return (
-    <div className="flex flex-col justify-between gap-24 mt-16 mb-32">
+    <div className="flex flex-col justify-between gap-24 mt-24 mb-32">
       <ShowcaseHolder
         projects={projects}
         title={projectsTitle}

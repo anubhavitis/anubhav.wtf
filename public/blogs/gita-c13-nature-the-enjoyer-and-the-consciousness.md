@@ -2,7 +2,7 @@
 title: "Bhagavad Gita Chapter 13: Nature, the Enjoyer and the Consciousness"
 date: "2025-07-22"
 description: "Krsna reveals the cosmic distinction between the material field, its knower, and the all-pervading Supreme consciousness"
-tags: "spirituality,gita"
+tags: "spirituality"
 ---
 
 Arjuna asks Krsna to distinguish between some terms that we take for granted. What is nature (prakriti), and the enjoyer? What is the field, and who is the knower of the field? What is knowledge and what is the object of knowledge?

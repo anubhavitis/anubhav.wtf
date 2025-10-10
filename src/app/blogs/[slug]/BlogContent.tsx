@@ -25,7 +25,7 @@ export function BlogContent({ content, title, date, tags }: BlogContentProps) {
   }, [theme]);
 
   return (
-    <article className="prose dark:prose-invert max-w-3xl mx-auto py-8 my-16">
+    <article className="prose dark:prose-invert max-w-3xl mx-auto py-8 mt-24 mb-16">
       <div className="flex flex-col gap-2 mt-12 mb-6">
         {title && (
           <div className="text-4xl font-bold text-gray-900 dark:text-gray-100 ">

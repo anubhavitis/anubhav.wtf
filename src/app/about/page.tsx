@@ -1,5 +1,3 @@
-import Content from "@/components/Content";
-import Social from "@/components/Social";
 import Image from "next/image";
 
 const age = Math.floor(
@@ -9,16 +7,15 @@ const age = Math.floor(
 
 export default function About() {
   return (
-    <div className="flex flex-col mt-12 py-2">
+    <div className="flex flex-col gap-2 ">
       {/* Header Section */}
-      <div className="flex flex-col items-center mb-16">
+      <div className="flex flex-col mt-24">
         <Image
           src="/avatar.png"
           alt="Anubhav Singhal"
-          width={200}
-          height={200}
-          className="rounded-2xl mb-8 
-            grayscale hover:grayscale-0 transition-all duration-500
+          width={150}
+          height={150}
+          className="rounded-2xl transition-all duration-500
             shadow-lg hover:shadow-xl hover:scale-105
             border border-gray-200 dark:border-gray-700
           "
@@ -29,9 +26,13 @@ export default function About() {
       <div className="space-y-8 text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
         <div className="space-y-6">
           <p>
-            Hi, I am Anubhav, a generalist software engineer. I've been
-            automating stuff since high school, and I've picked up most of what
-            I know through books, articles, and countless YouTube tutorials.
+            Hello. My name is Anubhav Singhal, a generalist software engineer
+            based in India.
+          </p>
+          <p>
+            I've been automating things since high school, and I've picked up
+            most of what I know through books, articles, and countless YouTube
+            tutorials.
           </p>
 
           <p>
@@ -41,8 +42,8 @@ export default function About() {
           </p>
 
           <p>
-            When I am not working, I like to go on long walks, read random books
-            to feed my curiosity, or cook myself a delicious meal.
+            When I am not working, you'll find me on long walks, reading random
+            books to feed my curiosity, or cooking myself a delicious meal.
           </p>
         </div>
 
@@ -53,14 +54,27 @@ export default function About() {
               Want to contact me?
             </h3>
             <p>
-              If you're building something cool and think I'd be a good fit for
-              your team, want to bounce around ideas, cook something delicious
-              or just join me on one of my long walks. Don't be shy, slide into
-              my DMs <span className="text-xl">:)</span>
+              I am active on twitter and my email. However, the best way to
+              reach out would be introduction via someone I know.
             </p>
+            <div className="flex gap-4 text-black dark:text-white">
+              <a
+                href="https://twitter.com/anubhavitis"
+                className="hover:underline hover:decoration-green-600 decoration-2"
+                target="_blank"
+              >
+                twitter
+              </a>
+              <a
+                href="mailto:anubhavitis@gmail.com"
+                className="hover:underline hover:decoration-green-600 decoration-2"
+                target="_blank"
+              >
+                anubhavitis@gmail.com
+              </a>
+            </div>
           </div>
         </div>
-        <Social github={false} linkedin={false} />
       </div>
 
       {/* Social Links */}

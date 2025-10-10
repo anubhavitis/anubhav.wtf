@@ -1,8 +1,8 @@
-'use server';
+"use server";
 
-import matter from 'gray-matter';
-import fs from 'fs';
-import path from 'path';
+import matter from "gray-matter";
+import fs from "fs";
+import path from "path";
 
 export interface BlogPost {
   slug: string;
@@ -18,27 +18,29 @@ export interface BlogPost {
 let fetchedBlogs: BlogPost[] = [];
 
 async function fetchBlogs() {
-  const blogsDirectory = path.join(process.cwd(), 'public/blogs');
+  const blogsDirectory = path.join(process.cwd(), "public/blogs");
   const filenames = fs.readdirSync(blogsDirectory);
-  
+
   const blogs = filenames
-    .filter(filename => filename.endsWith('.md'))
-    .map(filename => {
-      const slug = filename.replace(/\.md$/, '');
+    .filter((filename) => filename.endsWith(".md"))
+    .map((filename) => {
+      const slug = filename.replace(/\.md$/, "");
       const fullPath = path.join(blogsDirectory, filename);
-      const fileContents = fs.readFileSync(fullPath, 'utf8');
-      
+      const fileContents = fs.readFileSync(fullPath, "utf8");
+
       // Parse front matter
       const { data, content } = matter(fileContents);
-      
+
       return {
         slug,
         title: data.title || slug,
-        description: data.description || '',
-        date: new Date(data.date || ''),
+        description: data.description || "",
+        date: new Date(data.date || ""),
         link: `/blogs/${slug}`,
-        tags: data.tags ? data.tags.split(',').map((tag: string) => tag.trim()) : [],
-        content: content
+        tags: data.tags
+          ? data.tags.split(",").map((tag: string) => tag.trim())
+          : [],
+        content: content,
       };
     })
     .sort((a, b) => b.date.getTime() - a.date.getTime());
@@ -65,7 +67,7 @@ export async function getAllBlogs(tags: string[] = []): Promise<BlogPost[]> {
     }
     return blog.tags.some((tag) => tags.includes(tag));
   });
-} 
+}
 
 export async function getAllTags(): Promise<string[]> {
   if (fetchedBlogs.length == 0) {

@@ -1,35 +1,41 @@
 import { BlogPost } from "@/lib/blogs";
 import Link from "next/link";
 
-export function BlogComponent({ date, title, description, link }: BlogPost) {
+export function BlogComponent({ date, title, tags, link }: BlogPost) {
   return (
-    <div className="group rounded transition-colors w-full">
-      <Link href={link} rel="noopener noreferrer">
-        <div className="flex group flex-col justify-between md:flex-row my-4 gap-x-5 gap-y-2">
-          <div
-            className="
-            w-full md:w-1/5 flex flex-col md:flex-row
-            md:text-right md:mr-2 
-            justify-start items-start md:justify-end md:items-center"
-          >
-            <h1 className="text-gray-400 dark:text-gray-600 text-md">
-              {date.toLocaleDateString("en-US", {
-                month: "long",
-                day: "numeric",
-                year: "numeric",
-              })}
-            </h1>
-          </div>
-          <div className="w-full md:w-4/5 md:ml-2">
-            <div className="text-lg font-semibold transition-colors group-hover:underline group-hover:decoration-green-600 group-hover:decoration-2 group-hover:underline-offset-4">
+    <div className=" rounded transition-colors w-full">
+      <div className="flex flex-col justify-between my-4 gap-x-5 gap-y-2">
+        <div className="w-full">
+          <Link href={link} rel="noopener noreferrer">
+            <div className="text-lg font-semibold transition-colors hover:underline hover:decoration-green-600 hover:decoration-2 hover:underline-offset-4">
               {title}
             </div>
-            <div className="text-gray-400 dark:text-gray-600 text-sm">
-              {description}
-            </div>
+          </Link>
+        </div>
+        <div className="text-gray-500 dark:text-gray-400 text-sm w-full flex gap-2 justify-start items-start">
+          <h1 className="pr-2 border-r-2 border-gray-400 dark:border-gray-600">
+            {date.toLocaleDateString("en-US", {
+              month: "long",
+              day: "numeric",
+              year: "numeric",
+            })}{" "}
+          </h1>
+          <div className="flex gap-2">
+            {tags.map((tag, index) => {
+              return (
+                <>
+                  <Link href={`/blogs?tag=${tag}`} key={tag}>
+                    <span className="hover:text-black hover:dark:text-white transition-colors hover:underline hover:decoration-green-600 hover:decoration hover:underline-offset-2">
+                      {tag}
+                    </span>
+                  </Link>
+                  {index !== tags.length - 1 && ","}
+                </>
+              );
+            })}
           </div>
-        </div>            
-      </Link>
+        </div>
+      </div>
     </div>
   );
 }

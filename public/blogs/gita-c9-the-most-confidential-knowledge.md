@@ -2,7 +2,7 @@
 title: "Bhagavad Gita Chapter 9: The most confidential knowledge"
 date: "2025-07-07"
 description: "Chapter 9 reveals the supreme knowledge of devotion and the all-pervading nature of the Divine."
-tags: "spirituality,gita"
+tags: "spirituality"
 ---
 
 This chapter was all about Krishna explaining the the supreme knowledge. Something which is above all to be known. And it goes like:

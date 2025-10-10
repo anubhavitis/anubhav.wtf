@@ -2,7 +2,7 @@
 title: "Bhagavad Gita Chapter 8: Attaining the Supreme"
 date: "2025-07-05"
 description: "A concise overview of Chapter 8, focusing on the soul, karma, and attaining the Supreme through devotion."
-tags: "spirituality,gita"
+tags: "spirituality"
 ---
 
 This chapter starts with Arjuna asking explanation on what is Brahman, what is self, what are material manifestations, what is Karma, what are demigods, who is lord of sacrifice and how he lives inside our body, how can one engage in devotional services and how can one know you at the time of the death?

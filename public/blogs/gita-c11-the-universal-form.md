@@ -2,7 +2,7 @@
 title: "Bhagavad Gita Chapter 11: The Universal Form"
 date: "2025-07-13"
 description: "Arjuna witnesses Krishna's awe-inspiring universal form, revealing the cosmic power behind all creation and destruction."
-tags: "spirituality,gita"
+tags: "spirituality"
 ---
 
 Arjuna requests to see supreme's universal transcedental form. Arjuna has already surrendered to him. Krsna says:

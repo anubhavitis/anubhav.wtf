@@ -2,7 +2,7 @@
 title: "Bhagavad Gita Chapter 10: The opulence of Absolute"
 date: "2025-07-10"
 description: "Discover the limitless glories and divine manifestations of Krishna revealed in Chapter 10 of the Bhagavad Gita."
-tags: "spirituality,gita"
+tags: "spirituality"
 ---
 
 This chapter was about Krsna describing how limitless his manifestations are.

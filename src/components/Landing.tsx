@@ -1,5 +1,4 @@
 import React from "react";
-import Social from "./Social";
 
 export default function Landing() {
   return (
@@ -18,9 +17,6 @@ export default function Landing() {
       <div className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
         You'll often find me reading random books, going for long walks,
         exploring maths and physics, or cooking comfort food.
-      </div>
-      <div className="mt-8">
-        <Social />
       </div>
     </div>
   );
