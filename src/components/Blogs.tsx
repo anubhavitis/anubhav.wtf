@@ -23,14 +23,14 @@ export function BlogComponent({ date, title, tags, link }: BlogPost) {
           <div className="flex gap-2">
             {tags.map((tag, index) => {
               return (
-                <>
+                <div>
                   <Link href={`/blogs?tag=${tag}`} key={tag}>
                     <span className="hover:text-black hover:dark:text-white transition-colors hover:underline hover:decoration-green-600 hover:decoration hover:underline-offset-2">
                       {tag}
                     </span>
                   </Link>
                   {index !== tags.length - 1 && ","}
-                </>
+                </div>
               );
             })}
           </div>
