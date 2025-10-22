@@ -19,7 +19,6 @@ const projects: Showcase[] = [
         the first version of Peeksy back in June, 2025, and it has got amazing
         traction on Reddit and Twitter.{" "}
       </span>,
-      "Currently, I am working on Peeksy 2.0, which will be a major update to the app along with new GUI and AI features.",
     ],
     link: "https://github.com/anubhavitis/peeksy",
     image: "/peeksy.png",
