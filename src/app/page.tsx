@@ -4,7 +4,7 @@ import InspectWrapper from "@/components/InspectWrapper";
 import { getAllBlogs } from "@/lib/blogs";
 
 export default async function Home() {
-  const blogs = await getAllBlogs(["tech"]);
+  const blogs = await getAllBlogs();
 
   return (
     <InspectWrapper>
