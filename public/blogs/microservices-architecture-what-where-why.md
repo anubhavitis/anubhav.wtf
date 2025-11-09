@@ -22,7 +22,7 @@ In this article, you are going to learn about:
 
 In terms of architecture, there are two sorts of application systems: the first is centralized and known as a "monolith," whereas the second has a decentralized architecture known as "microservices."
 
-![Image](https://i.imgur.com/PhCiUup.png)
+![Image](/images/microservices-monolith-comparison.png)
 
 ### Monoliths
 
@@ -133,7 +133,7 @@ Making microservices accessible to client applications is a challenging task in 
 
 A single access point for all clients, such as an API gateway, is a viable option in this case. This API gateway checks client requests before routing them to the appropriate microservice. It can send requests to a single server or several servers, depending on the requirements.
 
-![Image](https://i.imgur.com/mpBD48D.png) credits: Foundersguide
+![Image](/images/microservices-api-gateway.png) credits: Foundersguide
 
 ### Access tokens
 

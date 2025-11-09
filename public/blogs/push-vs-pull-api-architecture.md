@@ -31,7 +31,7 @@ This whole process of polling updates usually takes hundreds of milliseconds. If
 
 While some of the drawbacks of pull architecture can be mitigated by a system that can distribute processing, even this quickly becomes a very expensive, resource-intensive option. If you need the ability to communicate frequent updates, push architecture is likely a better choice.
 
-![Pull architecture](https://i.imgur.com/RrRkb4B.png)
+![Pull architecture](/images/pull-architecture.png)
 
 ## Push API architecture
 
@@ -39,7 +39,7 @@ The strongest use case for push APIs are for instances in which you have time-se
 
 Push APIs allow the server to send updates to the client whenever new data becomes available, without a need for the client to explicitly request it. When the server receives new information, it pushes the data to the client application, no request needed. This makes it a more efficient communication standard for data that stays changes often.
 
-![Push Architecture](https://i.imgur.com/HIIkRQ1.png)
+![Push Architecture](/images/push-architecture.png)
 
 ## Pull vs Push APIs
 

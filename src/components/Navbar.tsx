@@ -20,7 +20,7 @@ export default function Navbar() {
     <div className="container mx-auto">
       <div className="flex items-center justify-between">
         {/* Name */}
-        <div className="text-xl font-bold">
+        <div className="text-xl font-bold text-gray-700 dark:text-gray-300">
           <Link href="/">anubhav singhal</Link>
         </div>
 
