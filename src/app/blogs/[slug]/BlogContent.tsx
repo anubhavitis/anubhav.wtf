@@ -25,7 +25,7 @@ export function BlogContent({ content, title, date, tags }: BlogContentProps) {
   }, [theme]);
 
   return (
-    <article className="prose dark:prose-invert max-w-3xl mx-auto py-8 mt-24 mb-16">
+    <article className="prose dark:prose-invert max-w-3xl mx-auto py-8 mt-24 mb-16 overflow-x-hidden">
       <div className="flex flex-col gap-2 mt-12 mb-6">
         {title && (
           <div className="text-4xl font-bold text-gray-900 dark:text-gray-100 ">
@@ -177,7 +177,7 @@ export function BlogContent({ content, title, date, tags }: BlogContentProps) {
             if (inline || (!hasLanguage && !hasNewlines)) {
               return (
                 <code
-                  className="bg-gray-100 dark:bg-gray-800 px-2 py-0.5 rounded text-sm font-mono text-gray-800 dark:text-gray-200 border border-gray-200 dark:border-gray-700"
+                  className="bg-gray-100 dark:bg-gray-800 px-2 py-0.5 rounded text-sm font-mono text-gray-800 dark:text-gray-200 border border-gray-200 dark:border-gray-700 break-words"
                   {...props}
                 >
                   {children}
@@ -187,7 +187,7 @@ export function BlogContent({ content, title, date, tags }: BlogContentProps) {
 
             // If not inline (triple backticks), render as code block
             return (
-              <div className="my-6 rounded-lg overflow-hidden shadow-md dark:shadow-gray-700/50">
+              <div className="my-6 rounded-lg overflow-x-auto shadow-md dark:shadow-gray-700/50 max-w-full">
                 <CopyBlock
                   text={content.replace(/\n$/, "")}
                   language={hasLanguage ? match[1] : ""}

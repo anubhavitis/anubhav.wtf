@@ -120,3 +120,17 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Prevent code blocks from overflowing */
+.prose pre,
+.prose code {
+  max-width: 100%;
+  overflow-x: auto;
+  word-wrap: break-word;
+}
+
+.prose pre code {
+  display: block;
+  width: max-content;
+  min-width: 100%;
+}

@@ -5,9 +5,9 @@ description: "A beginner-friendly walkthrough of how Ethereum processes a simple
 tags: "web3,beginner"
 ---
 
-If you're someone non-technical into crypto and often find all this Web3 stuff confusing, here’s something that can get you started.
+If you're someone non-technical into crypto and often find all this Web3 stuff confusing, here's something that can get you started.
 
-If you're a technical person and want to dive deep into what actually happens, wait a bit, I’ll be sharing a tech-focused article soon.
+If you're a technical person and want to dive deep into what actually happens, check out this [technical deep dive](/blogs/what-happens-when-you-send-1-usdc-on-ethereum).
 
 For now, lets's start with basic question:
 
