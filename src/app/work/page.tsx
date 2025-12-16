@@ -1,8 +1,7 @@
-import ShowcaseComponent, { Showcase } from "@/components/Showcase";
+import { ShowcaseExperience, Experience } from "@/components/Showcase";
 
-const experience: Showcase[] = [
+const experience: Experience[] = [
   {
-    title: "Numu",
     descriptions: [
       <span>Founding Engineer: October 2025 - Present</span>,
       <span>
@@ -21,7 +20,6 @@ const experience: Showcase[] = [
     image: "/numu.png",
   },
   {
-    title: "InfiniteCode",
     descriptions: [
       <span>Backend Lead: June 2025 - November 2025</span>,
       <span>
@@ -47,7 +45,6 @@ const experience: Showcase[] = [
     image: "/nexon.png",
   },
   {
-    title: "Fileverse",
     descriptions: [
       <span>Software Engineer: April 2024 - January 2025</span>,
       <span>
@@ -80,7 +77,6 @@ const experience: Showcase[] = [
     image: "/fileverse.png",
   },
   {
-    title: "Coinswitch",
     descriptions: [
       <span>Software Engineer: January 2022 - March 2024</span>,
       <span>
@@ -102,7 +98,6 @@ const experience: Showcase[] = [
     image: "/coinswitch.png",
   },
   {
-    title: "BrightMoney",
     descriptions: [
       <span>Internship: July 2021 - January 2022</span>,
       <span>
@@ -130,7 +125,7 @@ export default function Work() {
   return (
     <div className="flex flex-col min-h-screen">
       <div className="h-[20vh]" />
-      <ShowcaseComponent projects={experience} />
+      <ShowcaseExperience experiences={experience} />
       <div className="h-[20vh]" />
     </div>
   );
