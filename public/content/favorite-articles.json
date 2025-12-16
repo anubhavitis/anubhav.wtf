@@ -1,0 +1,14 @@
+[
+  {
+    "title": "Example Article 1",
+    "author": "Author Name",
+    "url": "https://example.com/article1",
+    "description": "Brief description of why this article is worth reading"
+  },
+  {
+    "title": "Example Article 2",
+    "author": "Author Name",
+    "url": "https://example.com/article2",
+    "description": "Brief description of why this article is worth reading"
+  }
+]

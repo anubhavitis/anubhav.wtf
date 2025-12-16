@@ -1,0 +1,14 @@
+[
+  {
+    "title": "Example Book 1",
+    "author": "Author Name",
+    "year": "2024",
+    "description": "What you loved about this book"
+  },
+  {
+    "title": "Example Book 2",
+    "author": "Author Name",
+    "year": "2023",
+    "description": "What you loved about this book"
+  }
+]

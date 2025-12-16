@@ -3,6 +3,7 @@ date: "2021-06-29"
 title: "Why Decentralised Web is a necessity?"
 description: "A deep dive into why Decentralised Web is a necessity and how it can be achieved"
 tags: "web3,tech"
+category: "tech"
 ---
 
 When web first came into existence in 1989, it was decentralised. Anyone could publish their content on the internet, and users could access that content without any third party services. Communication was easy, secure and peer-to-peer.

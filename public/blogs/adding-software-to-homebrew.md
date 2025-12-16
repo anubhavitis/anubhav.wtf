@@ -3,6 +3,7 @@ date: "2025-06-20"
 title: "Adding Software To Homebrew"
 description: "A comprehensive guide on how to add your software to Homebrew for easy installation"
 tags: "tech,tutorial"
+category: "tech"
 ---
 
 when I had wrote the initial poc script of [Peeksy](https://github.com/anubhavitis/peeksy), I received good feedback from twitter and reddit. Therefore, I decided to make it easily installable via homebrew.

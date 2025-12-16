@@ -11,6 +11,7 @@ export interface BlogPost {
   date: Date;
   link: string;
   tags: string[];
+  category: string;
   content: string;
 }
 
@@ -40,6 +41,7 @@ async function fetchBlogs() {
         tags: data.tags
           ? data.tags.split(",").map((tag: string) => tag.trim())
           : [],
+        category: data.category || "tech",
         content: content,
       };
     })
@@ -75,4 +77,16 @@ export async function getAllTags(): Promise<string[]> {
   }
 
   return Array.from(new Set(fetchedBlogs.flatMap((blog) => blog.tags)));
+}
+
+export async function getBlogsByCategory(
+  category: string,
+  limit?: number
+): Promise<BlogPost[]> {
+  if (fetchedBlogs.length == 0) {
+    fetchedBlogs = await fetchBlogs();
+  }
+
+  const filtered = fetchedBlogs.filter((blog) => blog.category === category);
+  return limit ? filtered.slice(0, limit) : filtered;
 }

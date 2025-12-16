@@ -3,6 +3,7 @@ date: "2022-08-22"
 title: "Microservices Architecture: What, Where & Why?"
 description: "A deep dive into Microservices Architecture, its benefits, and how it can be implemented in a project"
 tags: "tech,backend, system-design"
+category: "tech"
 ---
 
 If you are into software development, you've probably heard about microservices. They've acquired a lot of traction in recent years, and every major corporation is creating one.

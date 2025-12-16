@@ -3,6 +3,7 @@ date: "2025-11-18"
 title: "What Happens When You Send 1 USDC on Ethereum?"
 description: "A deep dive into the complete transaction lifecycle of sending USDC on Ethereum, from building transactions to understanding ERC-20 contracts"
 tags: "web3,ethereum,usdc,erc20"
+category: "tech"
 ---
 
 I have been in crypto space for about 4y now, and have sent and received plenty of transaction, yet when I was writing [What happens when you send 1ETH?](/blogs/what-happens-when-you-send-1-ETH), I learned that there are lot of gaps in my understanding. So I decided to deep dive into a whole transaction cycle.

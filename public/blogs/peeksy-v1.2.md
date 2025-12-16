@@ -3,6 +3,7 @@ date: "2025-06-16"
 title: "Peeksy v1.2"
 description: "Peeksy is an opensource macos tool that automatically renames your screenshots using open-ai vision."
 tags: "tech, open-source, AI"
+category: "tech"
 ---
 
 Peeksy is macos tool that automatically renames screenshots and images using OpenAI's GPT-4 Vision API. The tool analyzes image content and generates descriptive, meaningful filenames following a consistent naming convention.

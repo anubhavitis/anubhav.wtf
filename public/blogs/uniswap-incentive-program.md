@@ -3,6 +3,7 @@ title: "From Decline to Dominance: Uniswap's Stunning DeFi Comeback"
 date: "2025-06-15"
 description: "Uniswap's amazing incentive strategy fueling massive growth for Unichain, resulting in staggering 21,713% user growth within first month of launch"
 tags: "defi,web3"
+category: "tech"
 ---
 
 ## What’s Happening

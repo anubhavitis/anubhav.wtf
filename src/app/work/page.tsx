@@ -1,98 +1,137 @@
-import { Showcase } from "@/components/Showcase";
-import ShowcaseHolder from "@/components/ShowcaseHolder";
-
-const projects: Showcase[] = [
-  {
-    title: "Peeksy",
-    descriptions: [
-      "Peeksy is a macos tool that automatically renames the screenshots with meaningful names.",
-      <span>
-        I{" "}
-        <a
-          href="https://x.com/anubhavitis/status/1934292906455748995"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-blue-500 hover:text-blue-600 dark:text-blue-400 dark:hover:text-blue-300"
-        >
-          released
-        </a>{" "}
-        the first version of Peeksy back in June, 2025, and it has got amazing
-        traction on Reddit and Twitter.{" "}
-      </span>,
-    ],
-    link: "https://github.com/anubhavitis/peeksy",
-    image: "/peeksy.png",
-  },
-];
+import ShowcaseComponent, { Showcase } from "@/components/Showcase";
 
 const experience: Showcase[] = [
   {
+    title: "Numu",
+    descriptions: [
+      <span>Founding Engineer: October 2025 - Present</span>,
+      <span>
+        <a href="https://numu.xyz" target="_blank" rel="noopener noreferrer">
+          Numu
+        </a>{" "}
+        is a credit card powered by crypto, making digital assets accessible for
+        everyday spending.
+      </span>,
+      <span>
+        Started as a product within InfiniteCode, later spun off as an
+        independent company. I am leading Numu's backend systems to enable
+        seamless crypto-to-fiat transactions.
+      </span>,
+    ],
+    image: "/numu.png",
+  },
+  {
+    title: "InfiniteCode",
+    descriptions: [
+      <span>Backend Lead: June 2025 - November 2025</span>,
+      <span>
+        <a
+          href="https://infinitecode.org/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          InfiniteCode
+        </a>{" "}
+        builds DeFi products focused on the Middle Eastern market. Joined after
+        a sabbatical.
+      </span>,
+      <span>
+        Contributed to{" "}
+        <a href="https://nexon.xyz/" target="_blank" rel="noopener noreferrer">
+          Nexon
+        </a>
+        , a DEX trading platform, helping build systems that power decentralized
+        trading experiences.
+      </span>,
+    ],
+    image: "/nexon.png",
+  },
+  {
     title: "Fileverse",
     descriptions: [
-      "Fileverse is open-source decentralized collaborative workspace alternative to Google and Notion. ",
+      <span>Software Engineer: April 2024 - January 2025</span>,
       <span>
-        I designed and implemented the backend architecture for Fileverse's
-        multiple products like{" "}
+        <a
+          href="https://fileverse.io"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Fileverse
+        </a>{" "}
+        is an open-source decentralized workspace alternative to Google and
+        Notion. Found them on Twitter and decided to contribute.
+      </span>,
+      <span>
+        Worked on backend architecture for products like{" "}
         <a
           href="https://portal.fileverse.io/"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-blue-500 hover:text-blue-600 dark:text-blue-400 dark:hover:text-blue-300"
         >
           Fileverse Portal
-        </a>
-        ,{" "}
-        <a
-          href="https://ddocs.new"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-blue-500 hover:text-blue-600 dark:text-blue-400 dark:hover:text-blue-300"
-        >
+        </a>{" "}
+        and{" "}
+        <a href="https://ddocs.new" target="_blank" rel="noopener noreferrer">
           Ddoc
         </a>
-        , etc.{" "}
+        , enabling collaborative experiences on decentralized infrastructure.
       </span>,
     ],
-    link: "https://fileverse.io",
     image: "/fileverse.png",
   },
   {
     title: "Coinswitch",
     descriptions: [
-      "Coinswitch is India's largest crypto trading platform.",
-      "I contributed to the trade-engineering-team at Coinswitch, by designing and launching multiple key features used by millions monthly.",
+      <span>Software Engineer: January 2022 - March 2024</span>,
+      <span>
+        <a
+          href="https://www.coinswitch.co"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Coinswitch
+        </a>{" "}
+        is India's largest crypto trading platform, serving millions of users.
+        Joined as my first full-time role to build a career in blockchain.
+      </span>,
+      <span>
+        I contributed to the trade engineering team, building features that help
+        users trade seamlessly.
+      </span>,
     ],
-    link: "https://www.coinswitch.co",
     image: "/coinswitch.png",
+  },
+  {
+    title: "BrightMoney",
+    descriptions: [
+      <span>Internship: July 2021 - January 2022</span>,
+      <span>
+        <a
+          href="https://www.brightmoney.co/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          BrightMoney
+        </a>{" "}
+        helps young Americans clear their debt using AI-driven insights on their
+        expenses. Interned here during my final year.
+      </span>,
+      <span>
+        Worked on breaking down the monolithic account aggregator service into
+        multiple microservices, improving system scalability and
+        maintainability.
+      </span>,
+    ],
+    image: "/brightmoney.png",
   },
 ];
 
 export default function Work() {
-  const projectsTitle = (
-    <>
-      <span>Things I have build,</span>
-      <span>while making my mark on the web.</span>
-    </>
-  );
-  const projectsDescription =
-    "Building is the best way to learn. Here are some of the best projects I have worked on.";
-
-  const experienceTitle = <span>Organisations</span>;
-  const experienceDescription =
-    "I have been fortunate to work with remarkable firms and amazing people.";
-
   return (
-    <div className="flex flex-col justify-between gap-24 mt-24 mb-32">
-      <ShowcaseHolder
-        projects={projects}
-        title={projectsTitle}
-        description={projectsDescription}
-      />
-      <ShowcaseHolder
-        projects={experience}
-        title={experienceTitle}
-        description={experienceDescription}
-      />
+    <div className="flex flex-col min-h-screen">
+      <div className="h-[20vh]" />
+      <ShowcaseComponent projects={experience} />
+      <div className="h-[20vh]" />
     </div>
   );
 }

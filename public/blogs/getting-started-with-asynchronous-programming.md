@@ -3,6 +3,7 @@ date: "2021-06-10"
 title: "Getting started with Asynchronous programming"
 description: "A quick introduction to Asynchronous programming and its practical applications"
 tags: "tech,programming,tutorial"
+category: "tech"
 ---
 
 Generally, when we code an application, a chunk of code runs at a time. So if our code contains a certain number of tasks, then each of them is compiled one at a time. This form of programming is called **Synchronous programming**.

@@ -3,6 +3,7 @@ date: "2022-08-02"
 title: "Push vs Pull API Architecture"
 description: "A comparison of Push and Pull API Architecture and their use cases"
 tags: "tech,backend,system-design"
+category: "tech"
 ---
 
 The number of internet users has increased massively in the past few years, and handling this enormous amount of traffic is a big challenge for application developers. Choosing an appropriate architecture for communication between the server and clients plays a significant role in ensuring that traffic is kept at a manageable level.

@@ -3,6 +3,7 @@ date: "2025-11-09"
 title: "What Happens When You Send 1 ETH?"
 description: "A beginner-friendly walkthrough of how Ethereum processes a simple 1 ETH transfer"
 tags: "web3,beginner"
+category: "tech"
 ---
 
 If you're someone non-technical into crypto and often find all this Web3 stuff confusing, here's something that can get you started.

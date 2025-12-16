@@ -3,6 +3,7 @@ date: "2021-01-13"
 title: "What exactly is API?"
 description: "A deep dive into what API is and how it works, with examples"
 tags: "tech,backend,tutorial"
+category: "tech"
 ---
 
 APIs are one of the most significant parts of software development, every developer must be well versed with them. I have been working as a golang backend engineer for about a year now, have constructed plenty of APIs for various projects.
