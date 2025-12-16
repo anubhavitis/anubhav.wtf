@@ -2,7 +2,31 @@ import { ShowcaseProjects, Project } from "@/components/Showcase";
 
 const projects: Project[] = [
   {
+    title: "EzDawg",
+    date: "December 2025",
+    link: "https://github.com/anubhavitis/ezdawg",
+    descriptions: [
+      <span>
+        A smart investment portal for creating Dollar Cost Average (DCA)
+        investment on{" "}
+        <a
+          href="https://hyperliquid.xyz"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Hyperliquid
+        </a>{" "}
+        spot assets with automated recurring purchases.
+      </span>,
+      <span>
+        I first built a basic version for myself, and when a few friends showed
+        interest, I deployed it for public use.
+      </span>,
+    ],
+  },
+  {
     title: "Peeksy",
+    date: "June 2025",
     link: "https://github.com/anubhavitis/peeksy",
     descriptions: [
       <span>
@@ -25,6 +49,7 @@ const projects: Project[] = [
   },
   {
     title: "etcd-custom-orchestrator",
+    date: "2023",
     link: "https://github.com/anubhavitis/etcd-custom-orchestrator",
     descriptions: [
       <span>
@@ -48,5 +73,11 @@ const projects: Project[] = [
 ];
 
 export default function Projects() {
-  return <ShowcaseProjects projects={projects} />;
+  return (
+    <div>
+      <div className="h-[20vh]" />
+      <ShowcaseProjects projects={projects} />
+      <div className="h-[20vh]" />
+    </div>
+  );
 }

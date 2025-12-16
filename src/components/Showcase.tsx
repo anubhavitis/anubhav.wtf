@@ -6,9 +6,10 @@ export type Experience = {
   image: string;
 };
 
-// Type for projects (has title and link, no images)
+// Type for projects (has title, date, and link, no images)
 export type Project = {
   title: string;
+  date: string;
   link: string;
   descriptions: (string | React.ReactNode)[];
 };
@@ -88,6 +89,7 @@ export function ShowcaseProjects({ projects }: { projects: Project[] }) {
                 </svg>
               </a>
             </div>
+            <span className="text-sm opacity-60">{project.date}</span>
             <p className="text-gray-600 dark:text-gray-400">
               {project.descriptions.map((description, index) => (
                 <span
