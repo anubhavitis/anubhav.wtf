@@ -47,7 +47,7 @@ export default function Contact() {
                 >
                   <polyline points="20 6 9 17 4 12"></polyline>
                 </svg>
-              ) : (
+              ) : (x
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="16"

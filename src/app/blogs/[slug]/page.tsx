@@ -26,7 +26,7 @@ export async function generateMetadata({
     };
   }
 
-  const { title, description, date } = blogData;
+  const { title, description, date, cover } = blogData;
 
   return {
     title,
@@ -38,11 +38,13 @@ export async function generateMetadata({
       publishedTime: date?.toISOString(),
       authors: ["Anubhav"],
       url: `/blogs/${slug}`,
+      images: cover ? [{ url: cover }] : undefined,
     },
     twitter: {
       card: "summary_large_image",
       title,
       description,
+      images: cover ? [cover] : undefined,
     },
     other: {
       "article:published_time": date?.toISOString() || "",

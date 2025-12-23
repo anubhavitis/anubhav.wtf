@@ -11,9 +11,10 @@ export interface BlogContentProps {
   title: string;
   date: Date | null;
   tags: string[];
+  cover?: string;
 }
 
-export function BlogContent({ content, title, date, tags }: BlogContentProps) {
+export function BlogContent({ content, title, date, tags, cover }: BlogContentProps) {
   const { theme } = useTheme();
   const [codeTheme, setCodeTheme] = useState<Theme>({
     mode: theme as ThemeModes,
@@ -26,6 +27,15 @@ export function BlogContent({ content, title, date, tags }: BlogContentProps) {
 
   return (
     <article className="prose dark:prose-invert max-w-3xl mx-auto py-8 mt-24 mb-16 overflow-x-hidden">
+      {cover && (
+        <div className="mb-8">
+          <img
+            src={cover}
+            alt={title}
+            className="w-full h-auto rounded-lg shadow-lg dark:shadow-gray-700/50"
+          />
+        </div>
+      )}
       <div className="flex flex-col gap-2 mt-12 mb-6">
         {title && (
           <div className="text-4xl font-bold text-gray-900 dark:text-gray-100 ">
