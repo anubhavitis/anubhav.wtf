@@ -5,6 +5,7 @@ description: "A reflection on Dr. APJ Abdul Kalam's inspiring memoir about scien
 tags: "books,personal"
 category: "personal"
 cover: "/blogs/covers/wings-of-fire.png"
+coverCaption: "glad that I own a hardcopy of this"
 ---
 
 ref: https://www.goodreads.com/book/show/634583.Wings_of_Fire

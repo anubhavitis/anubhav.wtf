@@ -14,6 +14,7 @@ export interface BlogPost {
   category: string;
   content: string;
   cover?: string;
+  coverCaption?: string;
 }
 
 // Module-level cache - will persist for the lifetime of the server instance
@@ -45,6 +46,7 @@ async function fetchBlogs() {
         category: data.category || "tech",
         content: content,
         cover: data.cover,
+        coverCaption: data.coverCaption,
       };
     })
     .sort((a, b) => b.date.getTime() - a.date.getTime());

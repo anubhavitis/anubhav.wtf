@@ -12,9 +12,10 @@ export interface BlogContentProps {
   date: Date | null;
   tags: string[];
   cover?: string;
+  coverCaption?: string;
 }
 
-export function BlogContent({ content, title, date, tags, cover }: BlogContentProps) {
+export function BlogContent({ content, title, date, tags, cover, coverCaption }: BlogContentProps) {
   const { theme } = useTheme();
   const [codeTheme, setCodeTheme] = useState<Theme>({
     mode: theme as ThemeModes,
@@ -28,13 +29,34 @@ export function BlogContent({ content, title, date, tags, cover }: BlogContentPr
   return (
     <article className="prose dark:prose-invert max-w-3xl mx-auto py-8 mt-24 mb-16 overflow-x-hidden">
       {cover && (
-        <div className="mb-8">
+        <figure className="mb-8">
           <img
             src={cover}
             alt={title}
             className="w-full h-auto rounded-lg shadow-lg dark:shadow-gray-700/50"
           />
-        </div>
+          {coverCaption && (
+            <figcaption className="mt-2 text-center text-sm text-gray-500 dark:text-gray-400">
+              <ReactMarkdown
+                components={{
+                  p: ({ children }) => <span>{children}</span>,
+                  a: ({ href, children }) => (
+                    <a
+                      href={href}
+                      className="text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300 underline"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {children}
+                    </a>
+                  ),
+                }}
+              >
+                {coverCaption}
+              </ReactMarkdown>
+            </figcaption>
+          )}
+        </figure>
       )}
       <div className="flex flex-col gap-2 mt-12 mb-6">
         {title && (
