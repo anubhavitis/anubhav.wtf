@@ -4,7 +4,7 @@ const projects: Project[] = [
   {
     title: "EzDawg",
     date: "December 2025",
-    link: "https://github.com/anubhavitis/ezdawg",
+    link: "https://ezdawg.vercel.app/",
     descriptions: [
       <span>
         A smart investment portal for creating Dollar Cost Average (DCA)
@@ -67,6 +67,28 @@ const projects: Project[] = [
       <span>
         Later this was used at scale to power the pricing service and order
         service, eventually dropping p99 latency from 700ms to 5ms.
+      </span>,
+    ],
+  },
+  {
+    title: "AlgoViz",
+    date: "2019",
+    link: "https://vizalgo.netlify.app/",
+    descriptions: [
+      <span>
+        My pre-final year project. I was learning various graph algorithms and
+        wanted to visualize how they work. And tada, AlgoViz was born.
+      </span>,
+      <span>
+        My first project ever.{" "}
+        <a
+          href="https://github.com/ayush-tiwari57/Algorithm-Visualizer"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Source code
+        </a>
+        .
       </span>,
     ],
   },
