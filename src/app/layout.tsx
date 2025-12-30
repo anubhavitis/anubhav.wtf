@@ -5,6 +5,7 @@ import Script from "next/script";
 // import Inspect from "inspx";
 import { ThemeProvider } from "next-themes";
 import { Raleway, Geist_Mono } from "next/font/google";
+import { Analytics } from "@vercel/analytics/react";
 
 const Inspect = dynamic(() => import("inspx"), { ssr: false });
 
@@ -54,6 +55,7 @@ export default function RootLayout({
             </div>
           </ThemeProvider>
         </Inspect>
+        <Analytics />
       </body>
     </html>
   );
