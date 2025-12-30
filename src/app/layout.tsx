@@ -1,7 +1,7 @@
 "use client";
 import "./globals.css";
-import Footer from "@/components/Footer";
 import dynamic from "next/dynamic";
+import Script from "next/script";
 // import Inspect from "inspx";
 import { ThemeProvider } from "next-themes";
 import { Raleway, Geist_Mono } from "next/font/google";
@@ -29,6 +29,18 @@ export default function RootLayout({
       <head>
         <title>Anubhav Singhal</title>
         <meta name="description" content="Anubhav Singhal's Blog" />
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-WZ3C71TLCP"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-WZ3C71TLCP');
+          `}
+        </Script>
       </head>
       <body className={`${raleway.variable} ${geistMono.variable} antialiased`}>
         <Inspect disabled={false}>
