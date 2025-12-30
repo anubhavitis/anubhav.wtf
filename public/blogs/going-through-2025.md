@@ -210,7 +210,7 @@ I met so many people from different parts of the country. Some were there on vac
 **Everyday was a new adventure there**. Early morning walks, bike riding, trekking to view points, trying local foods and wines.
 
 ![Shillong Adventure](/images/going-through-2025/shillong-adventure.jpeg)
-(_pic by [kashmira](https://x.com/lowkeyloud_)\_)
+(_pic by [kashmira](https://x.com/lowkeyloud_)_)
 
 Luckily, [Shillong Literary Festival 2025](https://shillonglitfest.com/) was happening when I was there. Being a big fan of books and reading, I had to go there. This was my first literary festival, thanks to friends from zostel who introduced me to it.
 
