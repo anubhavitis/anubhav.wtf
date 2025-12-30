@@ -120,10 +120,6 @@ I started receiving emails from users. Some emails were about bugs, and others w
 
 Fixed bugs, and then started planning for peeksy-v2, with support to rename other images apart from screenshots, and more reliable systemctl auto start on reboot.
 
-Somewhere along this, [InfiniteCode](https://infinitecode.org/) was looking for a backend lead for one of their product called as [Nexon](https://nexon.xyz/). Their tech stack was very much similar to Pomotrade, [Shaan](https://x.com/0xNotthatsundar) was part of their frontend team and shared my profile.
-
-Two days later, I had joined [InfiniteCode](https://infinitecode.org/) as Backend Lead at [Nexon](https://nexon.xyz/).
-
 ---
 
 ## July
@@ -137,9 +133,13 @@ Around this time, Peeksy was [featured in liveMint](https://www.livemint.com/min
 
 Once the app was ready to be published, I came to know that Apple's notarisation requires $100 cost, and thus **dropped the plan to release it**.
 
-Later I also came to an understanding that people who aren't comfortable with cli, are normal and won't be interested to pay for a tool that renames images automatically.
+Later I also came to an understanding that **people who aren't comfortable with cli, are normal** and won't be interested to pay for a tool that renames images automatically.
 
 Even if there are customer, then the customer base is small enough that its easier that if I just setup the peeksy-cli in their mac rather than building a desktop app for it.
+
+Somewhere along this, [InfiniteCode](https://infinitecode.org/) was looking for a backend lead for one of their product called as [Nexon](https://nexon.xyz/). Their tech stack was very much similar to Pomotrade, [Shaan](https://x.com/0xNotthatsundar) was part of their frontend team and shared my profile.
+
+Two days later, I had **joined [InfiniteCode](https://infinitecode.org/) as Backend Lead** at [Nexon](https://nexon.xyz/).
 
 ---
 
@@ -210,7 +210,7 @@ I met so many people from different parts of the country. Some were there on vac
 **Everyday was a new adventure there**. Early morning walks, bike riding, trekking to view points, trying local foods and wines.
 
 ![Shillong Adventure](/images/going-through-2025/shillong-adventure.jpeg)
-(_pic by [kashmira](https://x.com/lowkeyloud_)_)
+(_pic by [kashmira](https://x.com/lowkeyloud_)\_)
 
 Luckily, [Shillong Literary Festival 2025](https://shillonglitfest.com/) was happening when I was there. Being a big fan of books and reading, I had to go there. This was my first literary festival, thanks to friends from zostel who introduced me to it.
 
