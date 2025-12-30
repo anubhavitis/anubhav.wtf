@@ -5,7 +5,6 @@ import Script from "next/script";
 // import Inspect from "inspx";
 import { ThemeProvider } from "next-themes";
 import { Raleway, Geist_Mono } from "next/font/google";
-import Navbar from "@/components/Navbar";
 
 const Inspect = dynamic(() => import("inspx"), { ssr: false });
 
