@@ -6,35 +6,51 @@ interface SceneProps {
   index: number;
   children: React.ReactNode;
   className?: string;
+  compact?: boolean;
+  snap?: boolean;
+  scrollRoot?: React.RefObject<HTMLElement | null>;
   onVisible?: () => void;
 }
 
-export function Scene({ index, children, className = "", onVisible }: SceneProps) {
+export function Scene({
+  index,
+  children,
+  className = "",
+  compact = false,
+  snap = false,
+  scrollRoot,
+  onVisible,
+}: SceneProps) {
   const ref = useRef<HTMLDivElement>(null);
+  const onVisibleRef = useRef(onVisible);
+  onVisibleRef.current = onVisible;
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
+    const root = scrollRoot?.current ?? null;
     const obs = new IntersectionObserver(
       ([entry]) => {
+        setVisible(entry.isIntersecting);
         if (entry.isIntersecting) {
-          setVisible(true);
-          onVisible?.();
+          onVisibleRef.current?.();
         }
       },
-      { threshold: 0.3 },
+      { threshold: 0.6, root },
     );
     obs.observe(el);
     return () => obs.disconnect();
-  }, [onVisible]);
+  }, [scrollRoot]);
 
   return (
     <div
       ref={ref}
       data-scene={index}
-      className={`min-h-screen flex flex-col items-center justify-center py-20 px-6 relative transition-all duration-700 ${
-        visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+      className={`${compact ? "min-h-[60vh] py-6 md:py-12" : "min-h-screen py-20"} ${snap ? "snap-start snap-always h-screen overflow-hidden" : ""} flex flex-col items-center justify-start pt-[42vh] md:justify-center md:pt-0 px-6 relative transition-all duration-200 md:duration-500 ${
+        visible
+          ? "opacity-100 translate-y-0 scale-100"
+          : "opacity-0 translate-y-6 scale-[0.98]"
       } ${className}`}
     >
       {children}
@@ -84,7 +100,7 @@ export function BlockBox({
   const variantStyles = {
     ok: "bg-blue-500/10 border-blue-500/40 text-blue-500 dark:bg-blue-400/10 dark:border-blue-400/40 dark:text-blue-400",
     new: "bg-amber-500/10 border-amber-500/50 text-amber-500 dark:bg-amber-400/10 dark:border-amber-400/50 dark:text-amber-400",
-    dead: "bg-red-500/10 border-red-500/30 text-red-500 opacity-50 line-through dark:bg-red-400/10 dark:border-red-400/30 dark:text-red-400",
+    dead: "bg-red-500/30 border-red-500 text-red-600 dark:bg-red-500/30 dark:border-red-500 dark:text-red-400",
     winner:
       "bg-emerald-500/10 border-emerald-500/50 text-emerald-500 dark:bg-emerald-400/10 dark:border-emerald-400/50 dark:text-emerald-400",
   };
@@ -142,11 +158,13 @@ export function TxPill({
   variant,
 }: {
   children: React.ReactNode;
-  variant: "in-block" | "returned" | "gone" | "safe";
+  variant: "in-block" | "waiting" | "returned" | "gone" | "safe";
 }) {
   const styles = {
     "in-block":
       "bg-blue-500/15 text-blue-500 border-blue-500/30 dark:text-blue-400 dark:border-blue-400/30",
+    waiting:
+      "bg-gray-500/15 text-gray-500 border-gray-500/30 border-dashed dark:text-gray-400 dark:border-gray-400/30",
     returned:
       "bg-amber-500/15 text-amber-500 border-amber-500/30 dark:text-amber-400 dark:border-amber-400/30",
     gone: "bg-red-500/10 text-red-500 border-red-500/20 line-through opacity-50 dark:text-red-400 dark:border-red-400/20",
@@ -179,7 +197,7 @@ export function Callout({
 
   return (
     <div
-      className={`bg-card border border-border rounded-[14px] p-6 my-8 ${borderStyle}`}
+      className={`bg-card rounded-[14px] p-4 my-2 md:p-6 md:my-8 ${borderStyle}`}
     >
       {children}
     </div>
