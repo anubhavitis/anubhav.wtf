@@ -13,6 +13,7 @@ export interface BlogPost {
   tags: string[];
   category: string;
   content: string;
+  format: "md" | "html";
   cover?: string;
   coverCaption?: string;
 }
@@ -25,13 +26,15 @@ async function fetchBlogs() {
   const filenames = fs.readdirSync(blogsDirectory);
 
   const blogs = filenames
-    .filter((filename) => filename.endsWith(".md"))
+    .filter(
+      (filename) => filename.endsWith(".md") || filename.endsWith(".html"),
+    )
     .map((filename) => {
-      const slug = filename.replace(/\.md$/, "");
+      const isHtml = filename.endsWith(".html");
+      const slug = filename.replace(/\.(md|html)$/, "");
       const fullPath = path.join(blogsDirectory, filename);
       const fileContents = fs.readFileSync(fullPath, "utf8");
 
-      // Parse front matter
       const { data, content } = matter(fileContents);
 
       return {
@@ -45,6 +48,7 @@ async function fetchBlogs() {
           : [],
         category: data.category || "tech",
         content: content,
+        format: (isHtml ? "html" : "md") as "md" | "html",
         cover: data.cover,
         coverCaption: data.coverCaption,
       };
@@ -85,7 +89,7 @@ export async function getAllTags(): Promise<string[]> {
 
 export async function getBlogsByCategory(
   category: string,
-  limit?: number
+  limit?: number,
 ): Promise<BlogPost[]> {
   if (fetchedBlogs.length == 0) {
     fetchedBlogs = await fetchBlogs();

@@ -2,7 +2,8 @@ import React from "react";
 import { notFound } from "next/navigation";
 import { Metadata } from "next";
 import { BlogContent } from "./BlogContent";
-import { BlogPost, getBlogBySlug } from "@/lib/blogs";
+import { getInteractiveBlog } from "@/components/blogs/registry";
+import { getBlogBySlug } from "@/lib/blogs";
 
 interface PageProps {
   params: Promise<{
@@ -61,6 +62,14 @@ async function Page({ params }: PageProps) {
 
   if (!blogData) {
     notFound();
+  }
+
+  if (blogData.format === "html") {
+    const InteractiveBlog = getInteractiveBlog(slug);
+    if (!InteractiveBlog) {
+      notFound();
+    }
+    return <InteractiveBlog />;
   }
 
   return <BlogContent {...blogData} />;
