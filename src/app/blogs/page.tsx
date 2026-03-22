@@ -1,10 +1,10 @@
 "use client";
 import { BlogComponent } from "@/components/Blogs";
 import { BlogPost, getAllBlogs } from "@/lib/blogs";
-import { useState, useEffect } from "react";
+import { useState, useEffect, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 
-export default function Blogs() {
+function BlogsContent() {
   const [blogs, setBlogs] = useState<BlogPost[]>([]);
   const searchParams = useSearchParams();
   const tag = searchParams.get("tag");
@@ -41,5 +41,13 @@ export default function Blogs() {
 
       <div className="h-[20vh]" />
     </div>
+  );
+}
+
+export default function Blogs() {
+  return (
+    <Suspense>
+      <BlogsContent />
+    </Suspense>
   );
 }
