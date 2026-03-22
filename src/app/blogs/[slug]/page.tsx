@@ -69,7 +69,7 @@ async function Page({ params }: PageProps) {
     if (!InteractiveBlog) {
       notFound();
     }
-    return <InteractiveBlog />;
+    return <InteractiveBlog date={blogData.date} tags={blogData.tags} />;
   }
 
   return <BlogContent {...blogData} />;

@@ -187,7 +187,13 @@ function ValidatorGrid() {
   );
 }
 
-export default function WhatIsBlockchainReorg() {
+export default function WhatIsBlockchainReorg({
+  date,
+  tags,
+}: {
+  date: Date;
+  tags: string[];
+}) {
   const [currentScene, setCurrentScene] = useState(1);
   const [scrollHintVisible, setScrollHintVisible] = useState(true);
   const scrollRef = useRef<HTMLDivElement>(null);
@@ -259,6 +265,21 @@ export default function WhatIsBlockchainReorg() {
               <p className="text-xl text-muted-foreground">
                 And why does the chain sometimes <em>change its mind</em>?
               </p>
+              <div className="flex flex-wrap items-center gap-2 mt-6 text-xs text-muted-foreground">
+                <span>
+                  {date.toLocaleDateString("en-US", {
+                    year: "numeric",
+                    month: "long",
+                    day: "numeric",
+                  })}
+                </span>
+                <span>·</span>
+                {tags.map((tag) => (
+                  <span key={tag} className="bg-card px-2 py-0.5 rounded-full">
+                    {tag}
+                  </span>
+                ))}
+              </div>
             </SceneInner>
           </Scene>
           <Scene
