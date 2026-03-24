@@ -1,13 +1,8 @@
-"use client";
 import "./globals.css";
-import dynamic from "next/dynamic";
 import Script from "next/script";
-// import Inspect from "inspx";
-import { ThemeProvider } from "next-themes";
+import { ThemeProvider } from "@/components/theme-provider";
 import { Raleway, Geist_Mono } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
-
-const Inspect = dynamic(() => import("inspx"), { ssr: false });
 
 const raleway = Raleway({
   variable: "--font-raleway",
@@ -43,18 +38,16 @@ export default function RootLayout({
         </Script>
       </head>
       <body className={`${raleway.variable} ${geistMono.variable} antialiased`}>
-        <Inspect disabled={false}>
-          <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-            disableTransitionOnChange
-          >
-            <div className="flex flex-col justify-center items-center min-h-screen max-w-xl mx-auto my-auto p-2">
-              <div>{children}</div>
-            </div>
-          </ThemeProvider>
-        </Inspect>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <div className="flex flex-col justify-center items-center min-h-screen max-w-xl mx-auto my-auto p-2">
+            <div>{children}</div>
+          </div>
+        </ThemeProvider>
         <Analytics />
       </body>
     </html>
