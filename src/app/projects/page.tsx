@@ -2,6 +2,58 @@ import { ShowcaseProjects, Project } from "@/components/Showcase";
 
 const projects: Project[] = [
   {
+    title: "Murmur",
+    date: "March 2026",
+    link: "https://github.com/anubhavitis/murmur",
+    descriptions: [
+      <span>
+        A free, offline speech-to-text tool for macOS — a local alternative to
+        Wispr Flow that runs entirely on your machine.
+      </span>,
+      <span>
+        Distributed via{" "}
+        <a
+          href="https://github.com/anubhavitis/homebrew-murmur"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Homebrew
+        </a>
+        , with no cloud calls and no data leaving your device.
+      </span>,
+    ],
+  },
+  {
+    title: "Web Playground",
+    date: "March 2026",
+    link: "https://web-playground-black.vercel.app/",
+    descriptions: [
+      <span>
+        A browser-based audio playground that generates every sound in real-time
+        using the{" "}
+        <a
+          href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Web Audio API
+        </a>
+        — no audio files, just oscillators, gain curves, and frequency ramps.
+      </span>,
+      <span>
+        Built to prove that UI sound design is procedural math, not media.{" "}
+        <a
+          href="https://github.com/anubhavitis/web-playground"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Source code
+        </a>
+        .
+      </span>,
+    ],
+  },
+  {
     title: "siphl.xyz",
     date: "December 2025",
     link: "https://siphl.xyz",
