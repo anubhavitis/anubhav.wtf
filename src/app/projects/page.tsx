@@ -2,9 +2,9 @@ import { ShowcaseProjects, Project } from "@/components/Showcase";
 
 const projects: Project[] = [
   {
-    title: "EzDawg",
+    title: "siphl.xyz",
     date: "December 2025",
-    link: "https://ezdawg.vercel.app/",
+    link: "https://siphl.xyz",
     descriptions: [
       <span>
         A smart investment portal for creating Dollar Cost Average (DCA)
