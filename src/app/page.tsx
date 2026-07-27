@@ -7,7 +7,7 @@ export default function Home() {
       <div className="flex flex-col gap-2">
         <div className="flex-shrink-0 mb-6 md:mb-0">
           <Image
-            src="/avatar.png"
+            src="/avatar.webp"
             alt="Anubhav Singhal"
             width={120}
             height={120}
