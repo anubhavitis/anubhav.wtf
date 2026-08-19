@@ -2,6 +2,22 @@ import { ShowcaseProjects, Project } from "@/components/Showcase";
 
 const projects: Project[] = [
   {
+    title: "pr-buddy",
+    date: "August 2026",
+    link: "https://github.com/anubhavitis/pr-buddy",
+    descriptions: [
+      <span>
+        A Chrome extension that reorders the files in a GitHub pull request so
+        you read them in an order that builds understanding: contracts and types
+        first, then implementation, then wiring, then tests.
+      </span>,
+      <span>
+        A local model does the ordering, so nothing about the PR leaves your
+        machine, and it writes no review comments of its own.
+      </span>,
+    ],
+  },
+  {
     title: "Murmur",
     date: "March 2026",
     link: "https://github.com/anubhavitis/murmur",

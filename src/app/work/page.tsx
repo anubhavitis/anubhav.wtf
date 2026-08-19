@@ -1,52 +1,48 @@
+import type { Metadata } from "next";
 import { ShowcaseExperience, Experience } from "@/components/Showcase";
+
+export const metadata: Metadata = {
+  title: "Work | Anubhav Singhal",
+  description:
+    "Backend and blockchain engineering roles at Outcome, Fileverse, Coinswitch and BrightMoney.",
+};
 
 const experience: Experience[] = [
   {
+    company: "Outcome",
+    role: "Founding Engineer",
+    dates: "June 2025 - Present",
+    link: "https://outcome.xyz",
     descriptions: [
-      <span>Founding Engineer: October 2025 - Present</span>,
       <span>
-        <a href="https://numu.xyz" target="_blank" rel="noopener noreferrer">
-          Numu
+        <a href="https://outcome.xyz" target="_blank" rel="noopener noreferrer">
+          Outcome
         </a>{" "}
-        is a credit card powered by crypto, making digital assets accessible for
-        everyday spending.
-      </span>,
-      <span>
-        Started as a product within InfiniteCode, later spun off as an
-        independent company. I am leading Numu's backend systems to enable
-        seamless crypto-to-fiat transactions.
-      </span>,
-    ],
-    image: "/numu.png",
-  },
-  {
-    descriptions: [
-      <span>Backend Lead: June 2025 - November 2025</span>,
-      <span>
+        is an on-chain prediction market built on{" "}
         <a
-          href="https://infinitecode.org/"
+          href="https://hyperliquid.xyz"
           target="_blank"
           rel="noopener noreferrer"
         >
-          InfiniteCode
-        </a>{" "}
-        builds DeFi products focused on the Middle Eastern market. Joined after
-        a sabbatical.
+          Hyperliquid
+        </a>
+        , where you take a position on whether an event will happen. Joined
+        after a sabbatical.
       </span>,
       <span>
-        Contributed to{" "}
-        <a href="https://nexon.xyz/" target="_blank" rel="noopener noreferrer">
-          Nexon
-        </a>
-        , a DEX trading platform, helping build systems that power decentralized
-        trading experiences.
+        Traders buy YES or NO tokens priced by the market's implied probability,
+        which settle to 1 USDC if the event happened and 0 if it did not, with
+        no leverage and no liquidations. I lead the backend systems behind it.
       </span>,
     ],
-    image: "/nexon.png",
+    image: "/outcome.png",
   },
   {
+    company: "Fileverse",
+    role: "Software Engineer",
+    dates: "April 2024 - January 2025",
+    link: "https://fileverse.io",
     descriptions: [
-      <span>Software Engineer: April 2024 - January 2025</span>,
       <span>
         <a
           href="https://fileverse.io"
@@ -77,8 +73,11 @@ const experience: Experience[] = [
     image: "/fileverse.png",
   },
   {
+    company: "Coinswitch",
+    role: "Software Engineer",
+    dates: "January 2022 - March 2024",
+    link: "https://www.coinswitch.co",
     descriptions: [
-      <span>Software Engineer: January 2022 - March 2024</span>,
       <span>
         <a
           href="https://www.coinswitch.co"
@@ -98,8 +97,11 @@ const experience: Experience[] = [
     image: "/coinswitch.png",
   },
   {
+    company: "BrightMoney",
+    role: "Internship",
+    dates: "July 2021 - January 2022",
+    link: "https://www.brightmoney.co/",
     descriptions: [
-      <span>Internship: July 2021 - January 2022</span>,
       <span>
         <a
           href="https://www.brightmoney.co/"

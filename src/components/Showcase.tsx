@@ -1,7 +1,11 @@
 import Image from "next/image";
 
-// Type for work experience (no title display, has images)
+// Type for work experience (logo shown instead of a title)
 export type Experience = {
+  company: string;
+  role: string;
+  dates: string;
+  link: string;
   descriptions: (string | React.ReactNode)[];
   image: string;
 };
@@ -21,9 +25,9 @@ export function ShowcaseExperience({
 }) {
   return (
     <div className="flex flex-col gap-4">
-      {experiences.map((experience, index) => (
+      {experiences.map((experience) => (
         <div
-          key={index}
+          key={experience.company}
           className="flex flex-col gap-4 py-4 border-b last:border-b-0"
         >
           <div className="flex flex-col gap-2">
@@ -31,23 +35,23 @@ export function ShowcaseExperience({
               <div className="w-full h-48 relative rounded-lg">
                 <Image
                   src={experience.image}
-                  alt={`Experience ${index + 1}`}
+                  alt={`${experience.company} logo`}
                   fill
                   style={{ objectFit: "contain" }}
                   className="rounded-lg"
                 />
               </div>
             )}
-            <p className="text-gray-600 dark:text-gray-400">
+            <div className="text-gray-600 dark:text-gray-400">
+              <span className="my-2 block">
+                {experience.role}: {experience.dates}
+              </span>
               {experience.descriptions.map((description, index) => (
-                <span
-                  className="text-gray-600 dark:text-gray-400 my-2 block"
-                  key={index}
-                >
+                <span className="my-2 block" key={index}>
                   {description}
                 </span>
               ))}
-            </p>
+            </div>
           </div>
         </div>
       ))}
@@ -90,16 +94,13 @@ export function ShowcaseProjects({ projects }: { projects: Project[] }) {
               </a>
             </div>
             <span className="text-sm opacity-60">{project.date}</span>
-            <p className="text-gray-600 dark:text-gray-400">
+            <div className="text-gray-600 dark:text-gray-400">
               {project.descriptions.map((description, index) => (
-                <span
-                  className="text-gray-600 dark:text-gray-400 my-2 block"
-                  key={index}
-                >
+                <span className="my-2 block" key={index}>
                   {description}
                 </span>
               ))}
-            </p>
+            </div>
           </div>
         </div>
       ))}
