@@ -23,7 +23,6 @@ export function BlogContent({ content, title, date, tags, cover, coverCaption }:
 
   useEffect(() => {
     setCodeTheme({ mode: theme as ThemeModes });
-    console.log(content, tags);
   }, [theme]);
 
   return (
