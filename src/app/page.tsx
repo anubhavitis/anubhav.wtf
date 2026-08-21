@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import PhysicalText from "@/components/PhysicalText";
 
 export default function Home() {
   return (
@@ -15,13 +16,15 @@ export default function Home() {
           />
         </div>
         <p className="text-base leading-relaxed">
-          Hi, my name is Anubhav Singhal.
+          <PhysicalText>Hi, my name is Anubhav Singhal.</PhysicalText>
         </p>
       </div>
 
       <p className="text-base leading-relaxed">
-        I build things and write about what I learn. Tech, books, and the
-        occasional life lessons.
+        <PhysicalText>
+          I build things and write about what I learn. Tech, books, and the
+          occasional life lessons.
+        </PhysicalText>
       </p>
 
       <div className="flex gap-4">
